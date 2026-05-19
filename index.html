@@ -171,6 +171,7 @@ body { font-family: 'Noto Sans TC', sans-serif; background: var(--bg); color: va
 .pl-card:last-child { border-radius: 0 0 12px 12px; }
 .pl-card + .pl-card { border-top: 1px solid var(--border); }
 .pl-card:hover { background: #FAFAFA; }
+.mb-img { float: right; width: 82px; height: 82px; object-fit: cover; border-radius: 10px; margin: -2px 0 8px 12px; }
 .pl-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 6px; gap: 10px; }
 .pl-name { font-size: 15px; font-weight: 700; flex: 1; }
 .pl-days { display: flex; gap: 4px; flex-shrink: 0; flex-wrap: wrap; justify-content: flex-end; }
@@ -812,11 +813,11 @@ body { font-family: 'Noto Sans TC', sans-serif; background: var(--bg); color: va
     </div>
     <div class="tl-item"><div class="tl-dot"></div>
       <div class="card hl">
-        <div class="ct">09:15</div>
+        <div class="ct">08:15</div>
         <div class="cn">🚖 Karen & Moof 前往機場</div>
         <div class="tags">
           <span class="t cost">Grab or Klook ≈ 200 THB，30 min</span>
-          <span class="t warn">⚠️ 11:20 起飛需 10:00 前到機場</span>
+          <span class="t warn">⚠️ 11:20 起飛需 08:50 前到機場</span>
         </div>
       </div>
     </div>
@@ -958,11 +959,11 @@ body { font-family: 'Noto Sans TC', sans-serif; background: var(--bg); color: va
     </div>
     <div class="tl-item"><div class="tl-dot"></div>
       <div class="card hl">
-        <div class="ct">15:00</div>
+        <div class="ct">14:15</div>
         <div class="cn">🚖 前往機場取行李 → CNX</div>
         <div class="tags">
           <span class="t cost">Grab or Klook ≈ 200 THB，30 min</span>
-          <span class="t warn">⚠️ 17:20 起飛需 15:30–16:00 到機場</span>
+          <span class="t warn">⚠️ 17:20 起飛需 14:50 前到機場</span>
         </div>
       </div>
     </div>
@@ -1041,7 +1042,7 @@ body { font-family: 'Noto Sans TC', sans-serif; background: var(--bg); color: va
         <div class="fl-detail">16:00 抵達 T1</div>
       </div>
     </div>
-    <div style="font-size:13px;opacity:.75;margin-top:4px">CI852 · 飛行 3 小時 40 分 · ⚠️ 需 10:00 前到機場</div>
+    <div style="font-size:13px;opacity:.75;margin-top:4px">CI852 · 飛行 3 小時 40 分 · ⚠️ 需 08:50 前到機場</div>
   </div>
 
   <div class="flight">
@@ -1057,7 +1058,7 @@ body { font-family: 'Noto Sans TC', sans-serif; background: var(--bg); color: va
         <div class="fl-detail">22:10 抵達 T2</div>
       </div>
     </div>
-    <div style="font-size:13px;opacity:.75;margin-top:4px">JX752 · 飛行 4 小時 50 分 · ⚠️ 需 15:30 前到機場</div>
+    <div style="font-size:13px;opacity:.75;margin-top:4px">JX752 · 飛行 4 小時 50 分 · ⚠️ 需 14:50 前到機場</div>
   </div>
 
   <!-- 住宿 -->
@@ -1652,6 +1653,7 @@ body { font-family: 'Noto Sans TC', sans-serif; background: var(--bg); color: va
   <div class="pl-group">
     <div class="pl-head" style="background:#E67E22">🍜 食品 · 飲品 · 調料</div>
     <div class="pl-card">
+      <img class="mb-img" src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=160&q=80" loading="lazy" onerror="this.style.display='none'" alt="coffee beans">
       <div class="pl-top"><div class="pl-name">☕️ 高山 Arabica 咖啡豆</div><div class="pl-days"><span class="pd">D6</span></div></div>
       <div class="pl-desc">清邁是泰國精品咖啡發源地，山區種植的 Arabica 品質極佳</div>
       <div class="tags">
@@ -1662,6 +1664,7 @@ body { font-family: 'Noto Sans TC', sans-serif; background: var(--bg); color: va
       <div class="pl-must">買豆子比買即溶包划算，磨好的也有，記得說要幾號研磨</div>
     </div>
     <div class="pl-card">
+      <img class="mb-img" src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=160&q=80" loading="lazy" onerror="this.style.display='none'" alt="thai tea">
       <div class="pl-top"><div class="pl-name">🍵 手標奶茶 ChaTraMue</div></div>
       <div class="pl-desc">泰國最知名奶茶品牌，台灣較難買到，3種口味：金（濃）、紅（淡）、綠（奶綠）</div>
       <div class="tags">
@@ -1671,6 +1674,7 @@ body { font-family: 'Noto Sans TC', sans-serif; background: var(--bg); color: va
       <div class="pl-must">買多折扣大，整箱帶回去最划算</div>
     </div>
     <div class="pl-card">
+      <img class="mb-img" src="https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?w=160&q=80" loading="lazy" onerror="this.style.display='none'" alt="thai curry">
       <div class="pl-top"><div class="pl-name">🍛 泰式調理包</div></div>
       <div class="pl-desc">冬蔭功、椰漿雞、綠咖哩、打拋豬——回台灣懷念清邁的解方</div>
       <div class="tags">
@@ -1679,6 +1683,7 @@ body { font-family: 'Noto Sans TC', sans-serif; background: var(--bg); color: va
       </div>
     </div>
     <div class="pl-card">
+      <img class="mb-img" src="https://images.unsplash.com/photo-1471943311424-646960669fbc?w=160&q=80" loading="lazy" onerror="this.style.display='none'" alt="honey">
       <div class="pl-top"><div class="pl-name">🍯 皇家農場蜂蜜</div></div>
       <div class="pl-desc">泰國皇家計畫支持的高山養蜂區，口感滑順有天然花香，富含營養。送禮自用都極合適</div>
       <div class="tags">
@@ -1688,6 +1693,7 @@ body { font-family: 'Noto Sans TC', sans-serif; background: var(--bg); color: va
       <div class="pl-must">罐子有標 Royal Project 才是正品</div>
     </div>
     <div class="pl-card">
+      <img class="mb-img" src="https://images.unsplash.com/photo-1506368249639-73a05d6f6488?w=160&q=80" loading="lazy" onerror="this.style.display='none'" alt="spices">
       <div class="pl-top"><div class="pl-name">🌶️ 泰式香料包 / 辣椒醬</div></div>
       <div class="pl-desc">南薑、香茅、打拋葉乾燥香料包，回家自己煮泰菜。辣椒醬送人超實用</div>
       <div class="tags">
@@ -1696,6 +1702,7 @@ body { font-family: 'Noto Sans TC', sans-serif; background: var(--bg); color: va
       </div>
     </div>
     <div class="pl-card">
+      <img class="mb-img" src="https://images.unsplash.com/photo-1621939514649-280e2ee25f60?w=160&q=80" loading="lazy" onerror="this.style.display='none'" alt="snacks">
       <div class="pl-top"><div class="pl-name">🍌 泰國限定 Pocky</div></div>
       <div class="pl-desc">芒果、香蕉等口味，泰國限定，每盒只要 20 THB 左右，塞滿行李箱最佳選擇</div>
       <div class="tags">
@@ -1709,6 +1716,7 @@ body { font-family: 'Noto Sans TC', sans-serif; background: var(--bg); color: va
   <div class="pl-group">
     <div class="pl-head" style="background:#E91E8C">💄 美妝 · 保養 · 香氛</div>
     <div class="pl-card">
+      <img class="mb-img" src="https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=160&q=80" loading="lazy" onerror="this.style.display='none'" alt="skincare">
       <div class="pl-top"><div class="pl-name">🧴 Lemongrass House</div></div>
       <div class="pl-desc">清邁天然香氛護膚品牌，精油、乳液、香皂、沐浴鹽，台灣買不到且比曼谷便宜</div>
       <div class="tags">
@@ -1718,6 +1726,7 @@ body { font-family: 'Noto Sans TC', sans-serif; background: var(--bg); color: va
       <div class="pl-must">香茅系列最經典，送禮包裝也漂亮</div>
     </div>
     <div class="pl-card">
+      <img class="mb-img" src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=160&q=80" loading="lazy" onerror="this.style.display='none'" alt="herbs">
       <div class="pl-top"><div class="pl-name">🌿 Herb Basics 草本香氛</div></div>
       <div class="pl-desc">清邁本土品牌，天然草本素材，香氣溫和放鬆，能舒緩身心壓力</div>
       <div class="tags">
@@ -1726,6 +1735,7 @@ body { font-family: 'Noto Sans TC', sans-serif; background: var(--bg); color: va
       </div>
     </div>
     <div class="pl-card">
+      <img class="mb-img" src="https://images.unsplash.com/photo-1559757175-5700dde675bc?w=160&q=80" loading="lazy" onerror="this.style.display='none'" alt="toothpaste">
       <div class="pl-top"><div class="pl-name">🦷 Dentiste 牙膏</div></div>
       <div class="pl-desc">泰國熱賣牙膏，淡淡青草香，溫和不嗆，台灣幾乎買不到。在泰國一條只要 189 THB</div>
       <div class="tags">
@@ -1735,6 +1745,7 @@ body { font-family: 'Noto Sans TC', sans-serif; background: var(--bg); color: va
       <div class="pl-must">一次買 3–5 條最划算，台灣網路上賣超貴</div>
     </div>
     <div class="pl-card">
+      <img class="mb-img" src="https://images.unsplash.com/photo-1596755389378-c31d21fd1273?w=160&q=80" loading="lazy" onerror="this.style.display='none'" alt="face mask">
       <div class="pl-top"><div class="pl-name">😴 ele 晚安面膜</div></div>
       <div class="pl-desc">泰國知名睡眠面膜，保水效果好，敷後皮膚光滑，在台灣很難買到</div>
       <div class="tags">
@@ -1748,6 +1759,7 @@ body { font-family: 'Noto Sans TC', sans-serif; background: var(--bg); color: va
   <div class="pl-group">
     <div class="pl-head" style="background:#3ABFB1">🏺 工藝品 · 手信 · 包包</div>
     <div class="pl-card">
+      <img class="mb-img" src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=160&q=80" loading="lazy" onerror="this.style.display='none'" alt="silver jewelry">
       <div class="pl-top"><div class="pl-name">🥈 手工銀飾</div><div class="pl-days"><span class="pd">D3</span></div></div>
       <div class="pl-desc">清邁是泰國銀飾工藝發源地，Wualai Road 一帶全是手工銀飾，比曼谷品質更好價格更低</div>
       <div class="tags">
@@ -1757,6 +1769,7 @@ body { font-family: 'Noto Sans TC', sans-serif; background: var(--bg); color: va
       <div class="pl-must">925 純銀標誌要確認，可以殺價</div>
     </div>
     <div class="pl-card">
+      <img class="mb-img" src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=160&q=80" loading="lazy" onerror="this.style.display='none'" alt="naraya bag">
       <div class="pl-top"><div class="pl-name">👜 NaRaYa 曼谷包</div></div>
       <div class="pl-desc">細緻手工蝴蝶結設計，清邁比曼谷便宜，輕巧實用，各種花色，送禮超討喜</div>
       <div class="tags">
@@ -1765,6 +1778,7 @@ body { font-family: 'Noto Sans TC', sans-serif; background: var(--bg); color: va
       </div>
     </div>
     <div class="pl-card">
+      <img class="mb-img" src="https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=160&q=80" loading="lazy" onerror="this.style.display='none'" alt="pottery">
       <div class="pl-top"><div class="pl-name">🏺 手工陶器 / 漆器</div><div class="pl-days"><span class="pd">D3</span></div></div>
       <div class="pl-desc">清邁是泰北工藝重鎮，手工陶碗盤、金漆器盒，質感高、價格實惠，帶回台灣超有品味</div>
       <div class="tags">
@@ -1774,6 +1788,7 @@ body { font-family: 'Noto Sans TC', sans-serif; background: var(--bg); color: va
       <div class="pl-must">易碎品記得用衣服包好，機場有氣泡紙可索取</div>
     </div>
     <div class="pl-card">
+      <img class="mb-img" src="https://images.unsplash.com/photo-1586075010923-2dd4570fb338?w=160&q=80" loading="lazy" onerror="this.style.display='none'" alt="thai silk fabric">
       <div class="pl-top"><div class="pl-name">🧵 泰絲 / 山地民族刺繡</div></div>
       <div class="pl-desc">泰北山地民族手工刺繡包包、泰絲圍巾，獨一無二的文化工藝品，非常適合送人</div>
       <div class="tags">
@@ -1782,6 +1797,7 @@ body { font-family: 'Noto Sans TC', sans-serif; background: var(--bg); color: va
       </div>
     </div>
     <div class="pl-card">
+      <img class="mb-img" src="https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?w=160&q=80" loading="lazy" onerror="this.style.display='none'" alt="eco bag">
       <div class="pl-top"><div class="pl-name">♻️ 環保皮革包（回收輪胎材質）</div></div>
       <div class="pl-desc">清邁本土設計品牌，以回收汽車輪胎與再生皮革製作，堅固耐用且造型前衛，2026 年超夯</div>
       <div class="tags">
@@ -1795,6 +1811,7 @@ body { font-family: 'Noto Sans TC', sans-serif; background: var(--bg); color: va
   <div class="pl-group">
     <div class="pl-head" style="background:#9B8EC4">✨ 清邁獨有 · 值得特地帶回</div>
     <div class="pl-card">
+      <img class="mb-img" src="https://images.unsplash.com/photo-1602178553285-c7e1fad5c8c7?w=160&q=80" loading="lazy" onerror="this.style.display='none'" alt="candle aromatherapy">
       <div class="pl-top"><div class="pl-name">🌸 KLĀY Cafe 香氛產品</div><div class="pl-days"><span class="pd">D1</span><span class="pd">D4</span></div></div>
       <div class="pl-desc">在 KLĀY Cafe 逛完可以順手帶走，香水、精油、香氛蠟燭，買完還附 Spotify 音樂卡</div>
       <div class="tags">
@@ -1803,6 +1820,7 @@ body { font-family: 'Noto Sans TC', sans-serif; background: var(--bg); color: va
       </div>
     </div>
     <div class="pl-card">
+      <img class="mb-img" src="https://images.unsplash.com/photo-1510906594845-bc082582c8cc?w=160&q=80" loading="lazy" onerror="this.style.display='none'" alt="artisan crafts">
       <div class="pl-top"><div class="pl-name">🎨 Baan Kang Wat 手工設計品</div><div class="pl-days"><span class="pd">D3</span></div></div>
       <div class="pl-desc">藝術村內各小店都是設計師自創品牌，明信片、畫作、陶瓷小物——在台灣完全買不到的東西</div>
       <div class="tags">
@@ -1811,6 +1829,7 @@ body { font-family: 'Noto Sans TC', sans-serif; background: var(--bg); color: va
       </div>
     </div>
     <div class="pl-card">
+      <img class="mb-img" src="https://images.unsplash.com/photo-1562159278-1253a58da141?w=160&q=80" loading="lazy" onerror="this.style.display='none'" alt="elephant craft">
       <div class="pl-top"><div class="pl-name">🐘 大象相關製品</div></div>
       <div class="pl-desc">泰國國寶，大象圖案布品、木雕、磁鐵，選品質好的（非量產）才有意義</div>
       <div class="tags">
