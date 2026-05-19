@@ -253,6 +253,9 @@ body { font-family: 'Noto Sans TC', sans-serif; background: var(--bg); color: va
     <button class="tab" style="--c:#E74C8B" data-target="places" onclick="switchDay(this)">
       <span class="dn">📍</span><span class="dd">地點</span>
     </button>
+    <button class="tab" style="--c:#E67E22" data-target="mustbuy" onclick="switchDay(this)">
+      <span class="dn">🛒</span><span class="dd">必買</span>
+    </button>
   </div>
 </div>
 
@@ -603,64 +606,140 @@ body { font-family: 'Noto Sans TC', sans-serif; background: var(--bg); color: va
   <div class="day-head" style="background:linear-gradient(135deg,#9B8EC4,#7B5EA7)" data-emoji="🛕">
     <span class="tag">Day 4 · 6/21（日）</span>
     <h2>自由放空日</h2>
-    <p>瑜珈 · 素帖寺 · 寺廟散步 · 按摩 · 最後晚餐</p>
+    <p>選你喜歡的版本，按摩＋最後晚餐固定</p>
   </div>
 
+  <!-- 版本切換 -->
+  <div style="display:flex;gap:10px;margin-bottom:20px">
+    <button class="ver-btn active" id="d4v1-btn" onclick="switchVer('d4v1','d4v2',this,document.getElementById('d4v2-btn'))"
+      style="flex:1;padding:12px;border-radius:14px;border:2px solid #9B8EC4;background:#9B8EC455;font-family:'Noto Sans TC',sans-serif;font-size:14px;font-weight:700;color:#7B5EA7;cursor:pointer">
+      🛕 版本 A<br><span style="font-size:12px;font-weight:400">瑜珈 · Doi Suthep · 寺廟</span>
+    </button>
+    <button class="ver-btn" id="d4v2-btn" onclick="switchVer('d4v2','d4v1',this,document.getElementById('d4v1-btn'))"
+      style="flex:1;padding:12px;border-radius:14px;border:2px solid var(--border);background:var(--card);font-family:'Noto Sans TC',sans-serif;font-size:14px;font-weight:700;color:var(--muted);cursor:pointer">
+      ☕️ 版本 B<br><span style="font-size:12px;font-weight:400">咖啡廳 · 逛街 · 週日夜市</span>
+    </button>
+  </div>
+
+  <!-- ── 版本 A：瑜珈 + 素帖寺 ── -->
+  <div id="d4v1">
+    <div class="sec">🛕 版本 A — 瑜珈 · 素帖寺 · 寺廟</div>
+    <div class="timeline">
+      <div class="tl-item"><div class="tl-dot"></div>
+        <div class="card hl">
+          <div class="ct">07:00</div>
+          <div class="cn">🧘 Yoga in the Park — 戶外晨間瑜珈</div>
+          <div class="cd">旅程最後一個完整早晨，在護城河旁草皮上練瑜珈，最療癒</div>
+          <div class="tags">
+            <span class="t loc">📍 清邁古城護城河公園</span>
+            <span class="t cost">免費 / 自由捐獻</span>
+            <span class="t warn">⚠️ FB 查當天課表</span>
+          </div>
+        </div>
+      </div>
+      <div class="tl-item"><div class="tl-dot"></div>
+        <div class="card">
+          <div class="ct">08:30</div>
+          <div class="cn">☕️ 悠閒早餐</div>
+          <div class="cd">飯店附近咖啡廳，不用趕</div>
+        </div>
+      </div>
+      <div class="tl-item"><div class="tl-dot"></div>
+        <div class="card hl">
+          <div class="ct">10:00</div>
+          <div class="cn">🛕 Doi Suthep 素帖寺（強烈推薦）</div>
+          <div class="cd">清邁城外最著名寺廟，海拔 1,080m，俯瞰清邁全城<br>爬 309 階石梯或搭纜車，值得！</div>
+          <div class="tags">
+            <span class="t loc">📍 Doi Suthep-Pui National Park</span>
+            <span class="t cost">門票 50 THB · 來回雙條車 80 THB</span>
+            <span class="t warn">⚠️ 需遮蔽衣物</span>
+          </div>
+        </div>
+      </div>
+      <div class="tl-item"><div class="tl-dot"></div>
+        <div class="card">
+          <div class="ct">12:30</div>
+          <div class="cn">🍽️ 午餐 — 古城小館</div>
+          <div class="tags"><span class="t cost">Grab ≈ 60 THB</span></div>
+        </div>
+      </div>
+      <div class="tl-item"><div class="tl-dot"></div>
+        <div class="card hl">
+          <div class="ct">14:00</div>
+          <div class="cn">🛕 古城寺廟散步</div>
+          <div class="cd">
+            <b>Wat Chedi Luang</b>（大佛塔）— 古城最壯觀，免費<br>
+            <b>Wat Phra Singh</b> — 佛像精美，門票 50 THB
+          </div>
+          <div class="tags"><span class="t loc">📍 古城內步行可達</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 版本 B：咖啡廳 + 逛街 ── -->
+  <div id="d4v2" style="display:none">
+    <div class="sec">☕️ 版本 B — 咖啡廳 · 逛街 · 週日夜市</div>
+    <div class="timeline">
+      <div class="tl-item"><div class="tl-dot"></div>
+        <div class="card hl">
+          <div class="ct">09:00</div>
+          <div class="cn">☕️ 早午餐咖啡 — 尼曼路探店</div>
+          <div class="cd">最後一個完整早晨，不趕路，找一間還沒去過的咖啡廳坐到飽</div>
+          <div class="tags">
+            <span class="t loc">📍 Nimmanhaemin Road</span>
+            <span class="t tip">參考 @witsarud 清邁咖啡清單</span>
+            <span class="t cost">人均 150–300 THB</span>
+          </div>
+        </div>
+      </div>
+      <div class="tl-item"><div class="tl-dot"></div>
+        <div class="card hl">
+          <div class="ct">10:30</div>
+          <div class="cn">🌸 KLĀY Cafe — 香氛咖啡廳</div>
+          <div class="cd">如果 D3 沒去到，或是逛完還想補一次香氛體驗<br>可順便補買精油、護手霜當手信</div>
+          <div class="tags">
+            <span class="t loc">📍 Nimman 一帶</span>
+            <span class="t cost">人均 200–350 THB</span>
+          </div>
+        </div>
+      </div>
+      <div class="tl-item"><div class="tl-dot"></div>
+        <div class="card">
+          <div class="ct">12:00</div>
+          <div class="cn">🍽️ 午餐 — Nimman 一帶</div>
+          <div class="tags"><span class="t cost">人均 150–250 THB</span></div>
+        </div>
+      </div>
+      <div class="tl-item"><div class="tl-dot"></div>
+        <div class="card hl">
+          <div class="ct">13:30</div>
+          <div class="cn">🛍️ 補逛 Baan Kang Wat or Nimman 設計小店</div>
+          <div class="cd">D3 沒買完的再補，或逛 Nimman Soi 1–17 沒進去的店<br>（週日最有市集氣氛）</div>
+          <div class="tags">
+            <span class="t loc">📍 Nimmanhaemin Soi 17</span>
+          </div>
+        </div>
+      </div>
+      <div class="tl-item"><div class="tl-dot"></div>
+        <div class="card">
+          <div class="ct">15:00</div>
+          <div class="cn">☕️ 下午茶咖啡廳第二攤</div>
+          <div class="cd">隨意找一間有冷氣的咖啡廳，坐坐聊天，吹一吹</div>
+          <div class="tags"><span class="t cost">飲品 80–150 THB</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 共同：按摩 + 晚餐（兩版本都有）── -->
+  <div class="sec">共同安排（兩版本都有）</div>
   <div class="timeline">
-    <div class="tl-item"><div class="tl-dot"></div>
-      <div class="card hl">
-        <div class="ct">07:00</div>
-        <div class="cn">🧘 Yoga in the Park — 戶外晨間瑜珈</div>
-        <div class="cd">旅程最後一個完整的早晨，在護城河旁草皮上練瑜珈，最療癒</div>
-        <div class="tags">
-          <span class="t loc">📍 清邁古城護城河公園</span>
-          <span class="t cost">免費 / 自由捐獻</span>
-          <span class="t warn">⚠️ FB 查當天課表</span>
-        </div>
-      </div>
-    </div>
-    <div class="tl-item"><div class="tl-dot"></div>
-      <div class="card">
-        <div class="ct">08:30</div>
-        <div class="cn">☕️ 悠閒早餐</div>
-        <div class="cd">飯店附近咖啡廳，不用趕，放鬆享受最後一個完整的清邁早晨</div>
-      </div>
-    </div>
-    <div class="tl-item"><div class="tl-dot"></div>
-      <div class="card hl">
-        <div class="ct">10:00</div>
-        <div class="cn">🛕 Doi Suthep 素帖寺（強烈推薦）</div>
-        <div class="cd">清邁城外最著名寺廟，海拔 1,080m 山頂，俯瞰清邁全城，必去！<br>爬 309 階石梯或搭纜車上去，值得</div>
-        <div class="tags">
-          <span class="t loc">📍 Doi Suthep-Pui National Park · Grab 或雙條車</span>
-          <span class="t cost">門票 50 THB · 來回雙條車 80 THB</span>
-          <span class="t warn">⚠️ 需遮蔽衣物</span>
-        </div>
-      </div>
-    </div>
-    <div class="tl-item"><div class="tl-dot"></div>
-      <div class="card">
-        <div class="ct">12:30</div>
-        <div class="cn">🍽️ 午餐 — 古城小館</div>
-        <div class="tags"><span class="t cost">Grab ≈ 60 THB</span></div>
-      </div>
-    </div>
-    <div class="tl-item"><div class="tl-dot"></div>
-      <div class="card hl">
-        <div class="ct">14:00</div>
-        <div class="cn">🛕 古城寺廟散步</div>
-        <div class="cd">
-          <b>Wat Chedi Luang</b>（大佛塔）— 古城最壯觀，免費入場<br>
-          <b>Wat Phra Singh</b> — 佛像精美，門票 50 THB
-        </div>
-        <div class="tags"><span class="t loc">📍 古城內步行可達</span></div>
-      </div>
-    </div>
     <div class="tl-item"><div class="tl-dot m"></div>
       <div class="card ms">
-        <div class="ct m">15:30</div>
+        <div class="ct m">16:00</div>
         <div class="cn">💆 按摩 — Amber 私藏第一名 or Lila</div>
-        <div class="cd">這是在清邁最後一個完整下午，好好享受！<br>建議全身 1.5–2 小時深層按摩</div>
+        <div class="cd">在清邁最後一個完整下午，好好享受！<br>建議全身 1.5–2 小時深層按摩</div>
         <div class="tags">
           <span class="t cost">300–500 THB/人</span>
           <span class="t warn">⚠️ 先問 Amber 有沒有私藏地址</span>
@@ -669,7 +748,7 @@ body { font-family: 'Noto Sans TC', sans-serif; background: var(--bg); color: va
     </div>
     <div class="tl-item"><div class="tl-dot"></div>
       <div class="card">
-        <div class="ct">17:30</div>
+        <div class="ct">18:00</div>
         <div class="cn">🏨 回飯店梳妝換裝</div>
       </div>
     </div>
@@ -691,9 +770,7 @@ body { font-family: 'Noto Sans TC', sans-serif; background: var(--bg); color: va
         <div class="ct">21:00</div>
         <div class="cn">🎪 週日夜市散步</div>
         <div class="cd">Tha Phae Gate → Ratchadamnoen Rd · 買最後的手信、吃芒果糯米飯 🥭</div>
-        <div class="tags">
-          <span class="t cost">每週日 17:00–23:00</span>
-        </div>
+        <div class="tags"><span class="t cost">每週日 17:00–23:00</span></div>
       </div>
     </div>
     <div class="tl-item"><div class="tl-dot"></div>
@@ -913,44 +990,91 @@ body { font-family: 'Noto Sans TC', sans-serif; background: var(--bg); color: va
 <div class="day-panel" id="flight">
   <h2 style="font-size:22px;font-weight:900;margin-bottom:20px">✈️ 航班總覽</h2>
 
-  <div class="flight">
-    <div class="fl-label">Karen &amp; Moof · 2人 · 中華航空</div>
+  <!-- 去程 -->
+  <div class="sec">🛫 去程 — 6/18（四）台北 → 清邁</div>
+
+  <div class="flight" style="margin-bottom:12px">
+    <div class="fl-label">Karen &amp; Moof · 2人 · 中華航空 · 桃園 T1</div>
     <div class="fl-row">
-      <div><div class="fl-ap">TPE</div><div class="fl-detail">桃園 T1</div></div>
+      <div>
+        <div class="fl-ap">TPE</div>
+        <div class="fl-detail">07:30 出發</div>
+      </div>
       <div class="fl-line"><div class="fl-icon">✈️</div></div>
-      <div style="text-align:right"><div class="fl-ap">CNX</div><div class="fl-detail">清邁</div></div>
+      <div style="text-align:right">
+        <div class="fl-ap">CNX</div>
+        <div class="fl-detail">10:20 抵達</div>
+      </div>
     </div>
-    <div style="display:flex;justify-content:space-between;font-size:14px">
-      <span>去程 CI851</span><span>6/18 07:30 → 10:20</span>
-    </div>
-    <div style="display:flex;justify-content:space-between;font-size:14px;margin-top:6px;opacity:.7">
-      <span>回程 CI852</span><span>6/22 11:20 → 16:00</span>
-    </div>
+    <div style="font-size:13px;opacity:.75;margin-top:4px">CI851 · 飛行 3 小時 50 分</div>
   </div>
 
   <div class="flight">
-    <div class="fl-label">勳勳等 · 4人 · 星宇航空</div>
+    <div class="fl-label">勳勳等 · 4人 · 星宇航空 · 桃園 T2</div>
     <div class="fl-row">
-      <div><div class="fl-ap">TPE</div><div class="fl-detail">桃園 T2</div></div>
+      <div>
+        <div class="fl-ap">TPE</div>
+        <div class="fl-detail">13:20 出發</div>
+      </div>
       <div class="fl-line"><div class="fl-icon">✈️</div></div>
-      <div style="text-align:right"><div class="fl-ap">CNX</div><div class="fl-detail">清邁</div></div>
+      <div style="text-align:right">
+        <div class="fl-ap">CNX</div>
+        <div class="fl-detail">16:20 抵達</div>
+      </div>
     </div>
-    <div style="display:flex;justify-content:space-between;font-size:14px">
-      <span>去程 JX751</span><span>6/18 13:20 → 16:20</span>
-    </div>
-    <div style="display:flex;justify-content:space-between;font-size:14px;margin-top:6px;opacity:.7">
-      <span>回程 JX752</span><span>6/23 17:20 → 22:10</span>
-    </div>
+    <div style="font-size:13px;opacity:.75;margin-top:4px">JX751 · 飛行 4 小時</div>
   </div>
 
+  <!-- 回程 -->
+  <div class="sec" style="margin-top:28px">🛬 回程 — 清邁 → 台北</div>
+
+  <div class="flight" style="margin-bottom:12px">
+    <div class="fl-label">Karen &amp; Moof · 2人 · 中華航空 · 6/22（一）</div>
+    <div class="fl-row">
+      <div>
+        <div class="fl-ap">CNX</div>
+        <div class="fl-detail">11:20 出發</div>
+      </div>
+      <div class="fl-line"><div class="fl-icon">✈️</div></div>
+      <div style="text-align:right">
+        <div class="fl-ap">TPE</div>
+        <div class="fl-detail">16:00 抵達 T1</div>
+      </div>
+    </div>
+    <div style="font-size:13px;opacity:.75;margin-top:4px">CI852 · 飛行 3 小時 40 分 · ⚠️ 需 10:00 前到機場</div>
+  </div>
+
+  <div class="flight">
+    <div class="fl-label">勳勳等 · 4人 · 星宇航空 · 6/23（二）</div>
+    <div class="fl-row">
+      <div>
+        <div class="fl-ap">CNX</div>
+        <div class="fl-detail">17:20 出發</div>
+      </div>
+      <div class="fl-line"><div class="fl-icon">✈️</div></div>
+      <div style="text-align:right">
+        <div class="fl-ap">TPE</div>
+        <div class="fl-detail">22:10 抵達 T2</div>
+      </div>
+    </div>
+    <div style="font-size:13px;opacity:.75;margin-top:4px">JX752 · 飛行 4 小時 50 分 · ⚠️ 需 15:30 前到機場</div>
+  </div>
+
+  <!-- 住宿 -->
+  <div class="sec" style="margin-top:28px">🏨 住宿</div>
   <div class="icard" style="margin-bottom:16px">
-    <div class="lbl">🏨 住宿（全員）</div>
+    <div class="lbl">全員住宿</div>
     <div class="val" style="margin-top:6px">Rimping Village（瑞平村飯店）<br>
       <span style="font-weight:400;font-size:13px;color:var(--muted)">13 1 ถ. เชียงใหม่-ลำพูน ตำบลช้างม่อย จังหวัดเชียงใหม่ 50000</span>
     </div>
   </div>
+  <div class="igrid">
+    <div class="icard"><div class="lbl">Karen &amp; Moof</div><div class="val">6/18–6/22（4晚）</div></div>
+    <div class="icard"><div class="lbl">勳勳等4人</div><div class="val">6/18–6/23（5晚）</div></div>
+  </div>
 
-  <h3 style="font-size:16px;font-weight:700;margin:24px 0 12px">📱 必裝 App</h3>
+  <!-- App -->
+  <div class="sec" style="margin-top:28px">📱 必裝 App</div>
   <div class="igrid">
     <div class="icard"><div class="lbl">叫車</div><div class="val">Grab</div></div>
     <div class="icard"><div class="lbl">訂景點</div><div class="val">Klook</div></div>
@@ -958,7 +1082,7 @@ body { font-family: 'Noto Sans TC', sans-serif; background: var(--bg); color: va
     <div class="icard"><div class="lbl">翻譯</div><div class="val">Google 翻譯</div></div>
   </div>
 
-  <h3 style="font-size:16px;font-weight:700;margin:24px 0 12px">💱 匯率參考</h3>
+  <div class="sec" style="margin-top:20px">💱 匯率</div>
   <div class="icard">
     <div class="val">1 THB ≈ 0.9 TWD（2026年6月）<br>
       <span style="font-weight:400;font-size:13px;color:var(--muted)">建議在台換好泰銖，或落地機場 SuperRich 換匯</span>
@@ -974,9 +1098,9 @@ body { font-family: 'Noto Sans TC', sans-serif; background: var(--bg); color: va
     <div class="todo-ic">✓</div>
     <div class="todo-txt">勳勳組機場接送（Klook 已訂）<div class="todo-sub">已完成</div></div>
   </div>
-  <div class="todo">
-    <div class="todo-ic"></div>
-    <div class="todo-txt">Karen &amp; Moof 去程接送<div class="todo-sub">Klook · 10:20 落地 · 負責人：Karen</div></div>
+  <div class="todo done">
+    <div class="todo-ic">✓</div>
+    <div class="todo-txt">Karen &amp; Moof 去程接送<div class="todo-sub">Klook · 10:20 落地 · 已完成</div></div>
   </div>
   <div class="todo">
     <div class="todo-ic"></div>
@@ -1519,6 +1643,199 @@ body { font-family: 'Noto Sans TC', sans-serif; background: var(--bg); color: va
 
 </div><!-- /places -->
 
+<!-- ════════════════ MUST BUY ════════════════ -->
+<div class="day-panel" id="mustbuy">
+  <h2 style="font-size:22px;font-weight:900;margin-bottom:6px">🛒 清邁必買清單 2026</h2>
+  <p style="color:var(--muted);font-size:14px;margin-bottom:20px">查詢整理自最新資料，分類一目瞭然</p>
+
+  <!-- 食品 -->
+  <div class="pl-group">
+    <div class="pl-head" style="background:#E67E22">🍜 食品 · 飲品 · 調料</div>
+    <div class="pl-card">
+      <div class="pl-top"><div class="pl-name">☕️ 高山 Arabica 咖啡豆</div><div class="pl-days"><span class="pd">D6</span></div></div>
+      <div class="pl-desc">清邁是泰國精品咖啡發源地，山區種植的 Arabica 品質極佳</div>
+      <div class="tags">
+        <span class="t loc">推薦品牌：Doi Chaang Coffee · Akha Ama Coffee</span>
+        <span class="t cost">250–500 THB/包（200g）</span>
+        <span class="t loc">📍 Warorot Market · 各品牌門市</span>
+      </div>
+      <div class="pl-must">買豆子比買即溶包划算，磨好的也有，記得說要幾號研磨</div>
+    </div>
+    <div class="pl-card">
+      <div class="pl-top"><div class="pl-name">🍵 手標奶茶 ChaTraMue</div></div>
+      <div class="pl-desc">泰國最知名奶茶品牌，台灣較難買到，3種口味：金（濃）、紅（淡）、綠（奶綠）</div>
+      <div class="tags">
+        <span class="t cost">每盒 80–150 THB</span>
+        <span class="t loc">📍 Big C · Warorot Market · 各超市</span>
+      </div>
+      <div class="pl-must">買多折扣大，整箱帶回去最划算</div>
+    </div>
+    <div class="pl-card">
+      <div class="pl-top"><div class="pl-name">🍛 泰式調理包</div></div>
+      <div class="pl-desc">冬蔭功、椰漿雞、綠咖哩、打拋豬——回台灣懷念清邁的解方</div>
+      <div class="tags">
+        <span class="t cost">每包 50–100 THB</span>
+        <span class="t loc">📍 Warorot Market · Big C · 超市</span>
+      </div>
+    </div>
+    <div class="pl-card">
+      <div class="pl-top"><div class="pl-name">🍯 皇家農場蜂蜜</div></div>
+      <div class="pl-desc">泰國皇家計畫支持的高山養蜂區，口感滑順有天然花香，富含營養。送禮自用都極合適</div>
+      <div class="tags">
+        <span class="t cost">200–400 THB/瓶</span>
+        <span class="t loc">📍 皇家農場直營店 · 機場免稅</span>
+      </div>
+      <div class="pl-must">罐子有標 Royal Project 才是正品</div>
+    </div>
+    <div class="pl-card">
+      <div class="pl-top"><div class="pl-name">🌶️ 泰式香料包 / 辣椒醬</div></div>
+      <div class="pl-desc">南薑、香茅、打拋葉乾燥香料包，回家自己煮泰菜。辣椒醬送人超實用</div>
+      <div class="tags">
+        <span class="t cost">50–150 THB</span>
+        <span class="t loc">📍 Warorot Market（最便宜最齊全）</span>
+      </div>
+    </div>
+    <div class="pl-card">
+      <div class="pl-top"><div class="pl-name">🍌 泰國限定 Pocky</div></div>
+      <div class="pl-desc">芒果、香蕉等口味，泰國限定，每盒只要 20 THB 左右，塞滿行李箱最佳選擇</div>
+      <div class="tags">
+        <span class="t cost">20–40 THB/盒</span>
+        <span class="t loc">📍 便利商店 7-11 · Family Mart</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 美妝保養 -->
+  <div class="pl-group">
+    <div class="pl-head" style="background:#E91E8C">💄 美妝 · 保養 · 香氛</div>
+    <div class="pl-card">
+      <div class="pl-top"><div class="pl-name">🧴 Lemongrass House</div></div>
+      <div class="pl-desc">清邁天然香氛護膚品牌，精油、乳液、香皂、沐浴鹽，台灣買不到且比曼谷便宜</div>
+      <div class="tags">
+        <span class="t cost">護手霜 180 THB · 精油 350–600 THB</span>
+        <span class="t loc">📍 Nimman 一帶門市 · Warorot Market</span>
+      </div>
+      <div class="pl-must">香茅系列最經典，送禮包裝也漂亮</div>
+    </div>
+    <div class="pl-card">
+      <div class="pl-top"><div class="pl-name">🌿 Herb Basics 草本香氛</div></div>
+      <div class="pl-desc">清邁本土品牌，天然草本素材，香氣溫和放鬆，能舒緩身心壓力</div>
+      <div class="tags">
+        <span class="t cost">150–350 THB</span>
+        <span class="t loc">📍 清邁各藥妝店</span>
+      </div>
+    </div>
+    <div class="pl-card">
+      <div class="pl-top"><div class="pl-name">🦷 Dentiste 牙膏</div></div>
+      <div class="pl-desc">泰國熱賣牙膏，淡淡青草香，溫和不嗆，台灣幾乎買不到。在泰國一條只要 189 THB</div>
+      <div class="tags">
+        <span class="t cost">189 THB/條</span>
+        <span class="t loc">📍 藥妝店 · Big C · 超市</span>
+      </div>
+      <div class="pl-must">一次買 3–5 條最划算，台灣網路上賣超貴</div>
+    </div>
+    <div class="pl-card">
+      <div class="pl-top"><div class="pl-name">😴 ele 晚安面膜</div></div>
+      <div class="pl-desc">泰國知名睡眠面膜，保水效果好，敷後皮膚光滑，在台灣很難買到</div>
+      <div class="tags">
+        <span class="t cost">250–400 THB</span>
+        <span class="t loc">📍 藥妝店 · Big C</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 工藝 手信 -->
+  <div class="pl-group">
+    <div class="pl-head" style="background:#3ABFB1">🏺 工藝品 · 手信 · 包包</div>
+    <div class="pl-card">
+      <div class="pl-top"><div class="pl-name">🥈 手工銀飾</div><div class="pl-days"><span class="pd">D3</span></div></div>
+      <div class="pl-desc">清邁是泰國銀飾工藝發源地，Wualai Road 一帶全是手工銀飾，比曼谷品質更好價格更低</div>
+      <div class="tags">
+        <span class="t cost">戒指 150–400 THB · 手環 300–800 THB</span>
+        <span class="t loc">📍 Wualai 週六夜市（最多選擇）</span>
+      </div>
+      <div class="pl-must">925 純銀標誌要確認，可以殺價</div>
+    </div>
+    <div class="pl-card">
+      <div class="pl-top"><div class="pl-name">👜 NaRaYa 曼谷包</div></div>
+      <div class="pl-desc">細緻手工蝴蝶結設計，清邁比曼谷便宜，輕巧實用，各種花色，送禮超討喜</div>
+      <div class="tags">
+        <span class="t cost">小 200–400 THB · 中 400–700 THB</span>
+        <span class="t loc">📍 Nimman 區 · 機場有售</span>
+      </div>
+    </div>
+    <div class="pl-card">
+      <div class="pl-top"><div class="pl-name">🏺 手工陶器 / 漆器</div><div class="pl-days"><span class="pd">D3</span></div></div>
+      <div class="pl-desc">清邁是泰北工藝重鎮，手工陶碗盤、金漆器盒，質感高、價格實惠，帶回台灣超有品味</div>
+      <div class="tags">
+        <span class="t cost">陶碗 80–200 THB · 漆器 150–500 THB</span>
+        <span class="t loc">📍 Baan Kang Wat · 器具工藝市集 · Wualai 夜市</span>
+      </div>
+      <div class="pl-must">易碎品記得用衣服包好，機場有氣泡紙可索取</div>
+    </div>
+    <div class="pl-card">
+      <div class="pl-top"><div class="pl-name">🧵 泰絲 / 山地民族刺繡</div></div>
+      <div class="pl-desc">泰北山地民族手工刺繡包包、泰絲圍巾，獨一無二的文化工藝品，非常適合送人</div>
+      <div class="tags">
+        <span class="t cost">圍巾 200–500 THB · 手提包 300–800 THB</span>
+        <span class="t loc">📍 週日夜市 · Night Bazaar</span>
+      </div>
+    </div>
+    <div class="pl-card">
+      <div class="pl-top"><div class="pl-name">♻️ 環保皮革包（回收輪胎材質）</div></div>
+      <div class="pl-desc">清邁本土設計品牌，以回收汽車輪胎與再生皮革製作，堅固耐用且造型前衛，2026 年超夯</div>
+      <div class="tags">
+        <span class="t cost">400–1,200 THB</span>
+        <span class="t loc">📍 Baan Kang Wat 藝術村</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 清邁獨有 -->
+  <div class="pl-group">
+    <div class="pl-head" style="background:#9B8EC4">✨ 清邁獨有 · 值得特地帶回</div>
+    <div class="pl-card">
+      <div class="pl-top"><div class="pl-name">🌸 KLĀY Cafe 香氛產品</div><div class="pl-days"><span class="pd">D1</span><span class="pd">D4</span></div></div>
+      <div class="pl-desc">在 KLĀY Cafe 逛完可以順手帶走，香水、精油、香氛蠟燭，買完還附 Spotify 音樂卡</div>
+      <div class="tags">
+        <span class="t cost">精油 350–600 THB · 蠟燭 250–450 THB</span>
+        <span class="t loc">📍 KLĀY Cafe（Nimman 一帶）</span>
+      </div>
+    </div>
+    <div class="pl-card">
+      <div class="pl-top"><div class="pl-name">🎨 Baan Kang Wat 手工設計品</div><div class="pl-days"><span class="pd">D3</span></div></div>
+      <div class="pl-desc">藝術村內各小店都是設計師自創品牌，明信片、畫作、陶瓷小物——在台灣完全買不到的東西</div>
+      <div class="tags">
+        <span class="t cost">明信片 20–50 THB · 小物 100–500 THB</span>
+        <span class="t loc">📍 Baan Kang Wat · Nimmanhaemin Soi 17</span>
+      </div>
+    </div>
+    <div class="pl-card">
+      <div class="pl-top"><div class="pl-name">🐘 大象相關製品</div></div>
+      <div class="pl-desc">泰國國寶，大象圖案布品、木雕、磁鐵，選品質好的（非量產）才有意義</div>
+      <div class="tags">
+        <span class="t cost">木雕 150–600 THB</span>
+        <span class="t loc">📍 Night Bazaar · 週日夜市</span>
+      </div>
+      <div class="pl-must">選泰北手工製作（有「Handmade」標示），避免量產品</div>
+    </div>
+  </div>
+
+  <!-- 行李提示 -->
+  <div style="background:#F0FFF4;border:1.5px solid #38A169;border-radius:16px;padding:18px;margin-top:8px">
+    <div style="font-size:14px;font-weight:700;color:#2F9E44;margin-bottom:10px">🧳 打包提醒</div>
+    <div style="font-size:13px;color:#2D2D2D;line-height:1.8">
+      • 易碎品（陶器、漆器）用衣服包，機場也可索取氣泡紙<br>
+      • 液體類（精油、蜂蜜）需放托運行李，100ml 以下才能手提<br>
+      • 食品類（香料包、奶茶）建議密封袋分裝，避免海關問題<br>
+      • Warorot Market 現金為主，提早換好泰銖<br>
+      • 6/18 去程行李帶輕鬆點，回程才狂掃貨 😄
+    </div>
+  </div>
+</div><!-- /mustbuy -->
+
+</div><!-- /places -->
+
 </div><!-- /content -->
 
 <script>
@@ -1528,6 +1845,17 @@ function switchDay(el) {
   el.classList.add('active');
   document.getElementById(el.dataset.target).classList.add('active');
   window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function switchVer(showId, hideId, activeBtn, inactiveBtn) {
+  document.getElementById(showId).style.display = 'block';
+  document.getElementById(hideId).style.display = 'none';
+  activeBtn.style.background = '#9B8EC455';
+  activeBtn.style.borderColor = '#9B8EC4';
+  activeBtn.style.color = '#7B5EA7';
+  inactiveBtn.style.background = 'var(--card)';
+  inactiveBtn.style.borderColor = 'var(--border)';
+  inactiveBtn.style.color = 'var(--muted)';
 }
 
 function filterPlaces(cat, el) {
