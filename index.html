@@ -97,8 +97,39 @@ body { font-family: 'Noto Sans TC', sans-serif; background: var(--bg); color: va
   background: var(--card); border-radius: 16px; padding: 14px 18px;
   border: 1px solid var(--border); box-shadow: var(--shadow);
   transition: transform .15s, box-shadow .15s;
+  position: relative;
 }
 .card:hover { transform: translateY(-2px); box-shadow: 0 6px 24px rgba(0,0,0,.1); }
+
+/* ── LIST MODE ── */
+.tl-check {
+  display: none;
+  position: absolute; top: 13px; right: 13px;
+  width: 20px; height: 20px; cursor: pointer;
+  accent-color: #2F9E44; z-index: 2;
+}
+.list-mode .tl-check { display: block; }
+.tl-done .card { opacity: .38; }
+.tl-done .cn { text-decoration: line-through; }
+
+/* ── COUNTDOWN ── */
+#hero-countdown { margin-top: 14px; display: inline-flex; flex-direction: column; align-items: center; }
+.cd-num { font-size: 36px; font-weight: 900; line-height: 1; color: #fff; }
+.cd-lbl { font-size: 11px; font-weight: 700; letter-spacing: .12em; opacity: .85; color: #fff; margin-top: 2px; }
+
+/* ── TAB-ACTION BUTTONS ── */
+.tab-bar-row { display: flex; align-items: stretch; }
+.tab-bar-row .tabs { flex: 1; justify-content: flex-start; }
+.tab-actions { display: flex; gap: 6px; padding: 8px 10px; flex-shrink: 0; border-left: 1px solid var(--border); align-items: center; }
+.tab-act {
+  display: flex; flex-direction: column; align-items: center; gap: 2px;
+  padding: 5px 10px; border-radius: 8px; border: 1.5px solid var(--border);
+  background: var(--card); font-family: 'Noto Sans TC', sans-serif;
+  font-size: 15px; cursor: pointer; color: var(--muted); transition: all .2s; min-width: 48px;
+}
+.tab-act .act-lbl { font-size: 9px; font-weight: 700; letter-spacing: .06em; }
+.tab-act.on { background: #2D2D2D; color: #fff; border-color: #2D2D2D; }
+.tab-act:hover:not(.on) { background: #F4F4F4; }
 .card.hl { border-left: 4px solid var(--c, #FF7F5C); }
 .card.ms { border-left: 4px solid var(--massage); background: linear-gradient(135deg,#fff0f6,#fff); }
 
@@ -236,41 +267,52 @@ body { font-family: 'Noto Sans TC', sans-serif; background: var(--bg); color: va
       <b>六天五夜</b>　勳勳等4人　6/18–6/23　D1–D6 完整
     </div>
   </div>
+  <div id="hero-countdown"></div>
 </div>
 
 <!-- TABS -->
 <div class="tab-bar">
-  <div class="tabs">
-    <button class="tab active" style="--c:var(--d1)" data-target="d1" onclick="switchDay(this)">
-      <span class="dn">D1</span><span class="dd">6/18 四</span>
-    </button>
-    <button class="tab" style="--c:var(--d2)" data-target="d2" onclick="switchDay(this)">
-      <span class="dn">D2</span><span class="dd">6/19 五</span>
-    </button>
-    <button class="tab" style="--c:var(--d3)" data-target="d3" onclick="switchDay(this)">
-      <span class="dn">D3</span><span class="dd">6/20 六</span>
-    </button>
-    <button class="tab" style="--c:var(--d4)" data-target="d4" onclick="switchDay(this)">
-      <span class="dn">D4</span><span class="dd">6/21 日</span>
-    </button>
-    <button class="tab" style="--c:var(--d5)" data-target="d5" onclick="switchDay(this)">
-      <span class="dn">D5</span><span class="dd">6/22 一</span>
-    </button>
-    <button class="tab" style="--c:var(--d6)" data-target="d6" onclick="switchDay(this)">
-      <span class="dn">D6</span><span class="dd">6/23 二</span>
-    </button>
-    <button class="tab" style="--c:#6B6B6B" data-target="flight" onclick="switchDay(this)">
-      <span class="dn">✈️</span><span class="dd">航班</span>
-    </button>
-    <button class="tab" style="--c:#6B6B6B" data-target="todo" onclick="switchDay(this)">
-      <span class="dn">📋</span><span class="dd">待辦</span>
-    </button>
-    <button class="tab" style="--c:#E74C8B" data-target="places" onclick="switchDay(this)">
-      <span class="dn">📍</span><span class="dd">地點</span>
-    </button>
-    <button class="tab" style="--c:#E67E22" data-target="mustbuy" onclick="switchDay(this)">
-      <span class="dn">🛒</span><span class="dd">必買</span>
-    </button>
+  <div class="tab-bar-row">
+    <div class="tabs">
+      <button class="tab active" style="--c:var(--d1)" data-target="d1" onclick="switchDay(this)">
+        <span class="dn">D1</span><span class="dd">6/18 四</span>
+      </button>
+      <button class="tab" style="--c:var(--d2)" data-target="d2" onclick="switchDay(this)">
+        <span class="dn">D2</span><span class="dd">6/19 五</span>
+      </button>
+      <button class="tab" style="--c:var(--d3)" data-target="d3" onclick="switchDay(this)">
+        <span class="dn">D3</span><span class="dd">6/20 六</span>
+      </button>
+      <button class="tab" style="--c:var(--d4)" data-target="d4" onclick="switchDay(this)">
+        <span class="dn">D4</span><span class="dd">6/21 日</span>
+      </button>
+      <button class="tab" style="--c:var(--d5)" data-target="d5" onclick="switchDay(this)">
+        <span class="dn">D5</span><span class="dd">6/22 一</span>
+      </button>
+      <button class="tab" style="--c:var(--d6)" data-target="d6" onclick="switchDay(this)">
+        <span class="dn">D6</span><span class="dd">6/23 二</span>
+      </button>
+      <button class="tab" style="--c:#6B6B6B" data-target="flight" onclick="switchDay(this)">
+        <span class="dn">✈️</span><span class="dd">航班</span>
+      </button>
+      <button class="tab" style="--c:#6B6B6B" data-target="todo" onclick="switchDay(this)">
+        <span class="dn">📋</span><span class="dd">待辦</span>
+      </button>
+      <button class="tab" style="--c:#E74C8B" data-target="places" onclick="switchDay(this)">
+        <span class="dn">📍</span><span class="dd">地點</span>
+      </button>
+      <button class="tab" style="--c:#E67E22" data-target="mustbuy" onclick="switchDay(this)">
+        <span class="dn">🛒</span><span class="dd">必買</span>
+      </button>
+    </div>
+    <div class="tab-actions">
+      <button class="tab-act" onclick="goToday()" title="跳到今天的行程">
+        📅<span class="act-lbl">TODAY</span>
+      </button>
+      <button id="btn-list" class="tab-act" onclick="toggleList(this)" title="勾選模式">
+        ☐<span class="act-lbl">LIST</span>
+      </button>
+    </div>
   </div>
 </div>
 
@@ -2107,6 +2149,79 @@ function filterPlaces(cat, el) {
     }
   });
 }
+
+// ── TODAY ────────────────────────────────────────────────
+function goToday() {
+  const now = new Date();
+  const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  const tripDates = [
+    new Date(2026, 5, 18),
+    new Date(2026, 5, 19),
+    new Date(2026, 5, 20),
+    new Date(2026, 5, 21),
+    new Date(2026, 5, 22),
+    new Date(2026, 5, 23),
+  ];
+  let targetId = today < tripDates[0] ? 'd1'
+               : today > tripDates[5] ? 'd6'
+               : 'd' + (tripDates.findIndex(d => d.getTime() === today.getTime()) + 1 || 1);
+  const tab = document.querySelector('[data-target="' + targetId + '"]');
+  if (tab) switchDay(tab);
+}
+
+// ── COUNTDOWN ────────────────────────────────────────────
+function updateCountdown() {
+  const el = document.getElementById('hero-countdown');
+  if (!el) return;
+  const now = new Date();
+  const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  const start = new Date(2026, 5, 18);
+  const end   = new Date(2026, 5, 23);
+  const msDay = 864e5;
+  const daysLeft = Math.round((start - today) / msDay);
+  const tripDay  = Math.round((today - start) / msDay);
+
+  if (daysLeft > 0) {
+    el.innerHTML = '<span class="cd-num">' + daysLeft + '</span><span class="cd-lbl">DAYS TO GO</span>';
+  } else if (tripDay >= 0 && tripDay <= 5) {
+    el.innerHTML = '<span class="cd-num" style="font-size:22px">第 ' + (tripDay + 1) + ' 天</span><span class="cd-lbl">旅程進行中 🌴</span>';
+  } else {
+    el.innerHTML = '<span class="cd-num" style="font-size:18px">旅程結束</span><span class="cd-lbl">美好回憶 ✨</span>';
+  }
+}
+
+// ── LIST MODE ────────────────────────────────────────────
+let listModeOn = false;
+
+function initCheckboxes() {
+  let idx = 0;
+  document.querySelectorAll('.tl-item .card').forEach(card => {
+    const id = 'cm' + idx++;
+    const cb = document.createElement('input');
+    cb.type = 'checkbox';
+    cb.className = 'tl-check';
+    cb.checked = localStorage.getItem(id) === '1';
+    if (cb.checked) card.closest('.tl-item').classList.add('tl-done');
+    cb.addEventListener('change', () => {
+      localStorage.setItem(id, cb.checked ? '1' : '0');
+      card.closest('.tl-item').classList.toggle('tl-done', cb.checked);
+    });
+    card.appendChild(cb);
+  });
+}
+
+function toggleList(btn) {
+  listModeOn = !listModeOn;
+  document.body.classList.toggle('list-mode', listModeOn);
+  btn.classList.toggle('on', listModeOn);
+  btn.innerHTML = listModeOn
+    ? '✓<span class="act-lbl">LIST</span>'
+    : '☐<span class="act-lbl">LIST</span>';
+}
+
+// ── INIT ─────────────────────────────────────────────────
+initCheckboxes();
+updateCountdown();
 </script>
 </body>
 </html>
