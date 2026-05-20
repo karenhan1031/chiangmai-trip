@@ -448,381 +448,483 @@ body { font-family: 'Noto Sans TC', sans-serif; background: var(--bg); color: va
 
 <!-- ════════════════ DAY 2 ════════════════ -->
 <div class="day-panel" id="d2" data-day="2">
-  <div class="day-head" style="background:linear-gradient(135deg,#FFA940,#FF8C00)" data-emoji="🛕">
+  <div class="day-head" style="background:linear-gradient(135deg,#FFA940,#FF8C00)" data-emoji="🗺️">
     <span class="tag">Day 2 · 6/19（五）</span>
-    <h2>清邁古城探索日 ⭐</h2>
-    <p>百年早餐 · 廟宇巡禮 · Monk Chat · 必吃 Khao Soi</p>
+    <h2>分組行動 · A清萊 B尼曼</h2>
+    <p>清萊三廟一日遊 · 尼曼白色市集 · 晚上古城會合</p>
   </div>
 
   <div style="background:#FFF9DB;border:1.5px solid #FFD43B;border-radius:12px;padding:12px 16px;margin-bottom:20px;font-size:13px;color:#7B5800">
-    💡 <b>安排邏輯：</b>古城景點集中在護城河方圓 1km，全程步行串聯。早上涼快走廟，下午室內咖啡避暑，傍晚 Monk Chat（週五 17:30 限定），晚餐接古城必吃 Khao Soi，步行可達，完全不繞路。
+    💡 <b>安排邏輯：</b>清萊三廟距清邁 3 小時車程，週五出發最順（不佔週末假日）。留下來的人整天扎根尼曼，週五有 One Nimman 白色市集（15:00–22:00），地理上完全不繞路。晚上古城 Khao Soi 老店 20:00 會合，再一起去 Sum Bamboo 按摩。
   </div>
 
+  <div style="display:flex;gap:8px;margin-bottom:20px">
+    <button id="d2-btn-a" onclick="switchVer('d2-ver-a','d2-ver-b',this,document.getElementById('d2-btn-b'))"
+      style="flex:1;padding:10px;border-radius:10px;border:1.5px solid #FFA940;background:#FFF3CD;color:#7B5800;font-family:'Noto Sans TC',sans-serif;font-size:13px;font-weight:700;cursor:pointer">
+      🛕 A · Karen &amp; Moof + 有意願的人<br><span style="font-weight:400;font-size:12px">清萊廟宇一日遊</span>
+    </button>
+    <button id="d2-btn-b" onclick="switchVer('d2-ver-b','d2-ver-a',this,document.getElementById('d2-btn-a'))"
+      style="flex:1;padding:10px;border-radius:10px;border:1.5px solid var(--border);background:var(--card);color:var(--muted);font-family:'Noto Sans TC',sans-serif;font-size:13px;font-weight:700;cursor:pointer">
+      ☕ B · 其他人<br><span style="font-weight:400;font-size:12px">尼曼放空一整天</span>
+    </button>
+  </div>
+
+  <!-- A: 清萊 -->
+  <div id="d2-ver-a">
+    <div style="background:#FFF9DB;border-left:3px solid #FFA940;border-radius:0 8px 8px 0;padding:10px 14px;margin-bottom:16px;font-size:13px;color:#7B5800">
+      ⭐ <b>Karen &amp; Moof 固定參加</b>，其他人視意願加入。KKday 標準版一日遊（不含長頸族），約 12 小時，含車、午餐、門票。<b>出發前 5–7 天訂位，備註 6 人同車</b>。
+    </div>
+    <div class="timeline">
+      <div class="tl-item"><div class="tl-dot"></div>
+        <div class="card">
+          <div class="ct">06:30</div>
+          <div class="cn">🍳 早起、簡單早餐</div>
+          <div class="cd">飯店或外帶，帶薄長褲與披肩（廟宇規定）</div>
+        </div>
+      </div>
+      <div class="tl-item"><div class="tl-dot"></div>
+        <div class="card hl">
+          <div class="ct">07:30</div>
+          <div class="cn">🚐 KKday / Klook 司機飯店接送 → 清萊（車程 3 hr）</div>
+          <div class="tags">
+            <a class="tlink" href="https://www.klook.com/en-US/activity/73501-chiangrai-white-blue-black-temple-series-fullday-tour-from-chiangmai/" target="_blank"><span class="t klook">推薦：Klook White Blue Black 含溫泉 ★4.8（US$44.19/人）</span></a>
+            <span class="t cost">≈ 1,200–1,500 THB/人</span>
+            <span class="t warn">⚠️ 最晚出發前 5–7 天訂位，備註 6 人同車</span>
+          </div>
+        </div>
+      </div>
+      <div class="tl-item"><div class="tl-dot"></div>
+        <div class="card">
+          <div class="ct">09:30</div>
+          <div class="cn">🌋 清萊溫泉休息站</div>
+          <div class="cd">上廁所＋伸展，可玩 DIY 溫泉蛋，15–20 min</div>
+        </div>
+      </div>
+      <div class="tl-item"><div class="tl-dot"></div>
+        <div class="card hl">
+          <div class="ct">11:00</div>
+          <div class="cn">🤍 白廟 Wat Rong Khun</div>
+          <div class="cd">清萊最著名景點，全白＋鏡片碎玻璃拼貼，陽光下耀眼壯觀，停留約 1 小時</div>
+          <div class="tags">
+            <a class="tlink" href="https://www.google.com/maps/place/Wat+Rong+Khun/@19.8239596,99.7638163,17z/" target="_blank"><span class="t map">📍 Pa O Don Chai, Chiang Rai</span></a>
+            <span class="t cost">門票 100 THB</span>
+            <span class="t warn">⚠️ 需遮肩遮膝</span>
+          </div>
+        </div>
+      </div>
+      <div class="tl-item"><div class="tl-dot"></div>
+        <div class="card">
+          <div class="ct">12:00</div>
+          <div class="cn">🍽️ 午餐 — 白廟附近河濱餐廳（含）</div>
+          <div class="cd">Tour 含午餐 Buffet</div>
+        </div>
+      </div>
+      <div class="tl-item"><div class="tl-dot"></div>
+        <div class="card hl">
+          <div class="ct">13:30</div>
+          <div class="cn">💙 藍廟 Wat Rong Suea Ten</div>
+          <div class="cd">深藍色調＋金色裝飾，視覺衝擊強，停留 45 min</div>
+          <div class="tags">
+            <a class="tlink" href="https://www.google.com/maps/place/Wat+Rong+Suea+Ten/@19.8419788,99.7832099,17z/" target="_blank"><span class="t map">📍 Rim Kok, Chiang Rai · 🚗 15 min</span></a>
+            <span class="t cost">免費入場</span>
+          </div>
+        </div>
+      </div>
+      <div class="tl-item"><div class="tl-dot"></div>
+        <div class="card hl">
+          <div class="ct">15:00</div>
+          <div class="cn">🖤 黑屋 Baan Dam Museum</div>
+          <div class="cd">藝術家 Thawan Duchanee 的暗黑美學收藏，風格前衛，停留 45 min</div>
+          <div class="tags">
+            <a class="tlink" href="https://www.google.com/maps/place/Baan+Dam+Museum/@19.8781975,99.8313571,17z/" target="_blank"><span class="t map">📍 Nang Lae, Chiang Rai · 🚗 20 min</span></a>
+            <span class="t cost">門票 80 THB</span>
+          </div>
+        </div>
+      </div>
+      <div class="tl-item"><div class="tl-dot"></div>
+        <div class="card">
+          <div class="ct">16:30</div>
+          <div class="cn">🚐 啟程返回清邁（車程 2.5–3 hr，補眠）</div>
+        </div>
+      </div>
+      <div class="tl-item"><div class="tl-dot"></div>
+        <div class="card">
+          <div class="ct">19:30</div>
+          <div class="cn">🏨 回飯店，快速梳洗，準備跟 B 組 20:00 古城會合</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- B: 尼曼 -->
+  <div id="d2-ver-b" style="display:none">
+    <div style="background:#E8F5FF;border-left:3px solid #4DABF7;border-radius:0 8px 8px 0;padding:10px 14px;margin-bottom:16px;font-size:13px;color:#1A5F8B">
+      不衝清萊的人留在清邁，<b>整天扎根尼曼</b>。週五有 One Nimman 白色市集（15:00–22:00），一條路線串完不用 Grab 來回。
+    </div>
+    <div class="timeline">
+      <div class="tl-item"><div class="tl-dot"></div>
+        <div class="card">
+          <div class="ct">09:00</div>
+          <div class="cn">☕️ 慢慢起床，飯店早餐</div>
+        </div>
+      </div>
+      <div class="tl-item"><div class="tl-dot"></div>
+        <div class="card hl">
+          <div class="ct">10:00</div>
+          <div class="cn">🍵 KUMBO Matcha &amp; Craft — 早上必補！</div>
+          <div class="cd">D1 去過了再來一杯也不為過，今天有更多時間慢慢坐</div>
+          <div class="tags">
+            <a class="tlink" href="https://www.google.com/maps/search/KUMBO+Matcha+Craft+Chiang+Mai" target="_blank"><span class="t map">📍 Nimman</span></a>
+            <span class="t cost">飲品 80–150 THB</span>
+          </div>
+        </div>
+      </div>
+      <div class="tl-item"><div class="tl-dot"></div>
+        <div class="card">
+          <div class="ct">11:00</div>
+          <div class="cn">☕ Proudproudproud Cafe</div>
+          <div class="cd">尼曼咖啡廳第二攤，安靜坐下喝一杯，看看店裡的氛圍</div>
+          <div class="tags">
+            <a class="tlink" href="https://www.google.com/maps/search/Proudproudproud+Cafe+Chiang+Mai" target="_blank"><span class="t map">📍 Nimman</span></a>
+          </div>
+        </div>
+      </div>
+      <div class="tl-item"><div class="tl-dot"></div>
+        <div class="card hl">
+          <div class="ct">12:30</div>
+          <div class="cn">🍽️ 午餐 — Madee Restaurant</div>
+          <div class="cd">尼曼一帶餐廳，慢慢吃，順便吹冷氣</div>
+          <div class="tags">
+            <a class="tlink" href="https://www.google.com/maps/search/Madee+Restaurant+Chiang+Mai" target="_blank"><span class="t map">📍 Nimman</span></a>
+          </div>
+        </div>
+      </div>
+      <div class="tl-item"><div class="tl-dot"></div>
+        <div class="card">
+          <div class="ct">14:00</div>
+          <div class="cn">💍 Fimue 飾品店 + 🪑 Tiny Space 設計選物</div>
+          <div class="cd">尼曼一帶選品飾品店，慢慢逛</div>
+          <div class="tags">
+            <a class="tlink" href="https://www.google.com/maps/search/Fimue+Chiang+Mai" target="_blank"><span class="t map">📍 Fimue · Nimman</span></a>
+            <a class="tlink" href="https://www.google.com/maps/search/Tiny+Space+Chiang+Mai" target="_blank"><span class="t map">📍 Tiny Space · Nimman</span></a>
+          </div>
+        </div>
+      </div>
+      <div class="tl-item"><div class="tl-dot"></div>
+        <div class="card hl">
+          <div class="ct">15:30</div>
+          <div class="cn">🛍️ One Nimman 寧曼一號 + 白色市集（週五 15:00–22:00）⭐</div>
+          <div class="cd">尼曼路文創聚落，週五白色市集：年輕設計師與手作職人擺攤<br>香氛蠟燭、乾燥花飾、原創服飾</div>
+          <div class="tags">
+            <a class="tlink" href="https://www.google.com/maps/search/One+Nimman+Chiang+Mai" target="_blank"><span class="t map">📍 Nimmanhaemin Rd</span></a>
+            <span class="t cost">白色市集週一/五/六/日 15:00–22:00</span>
+          </div>
+        </div>
+      </div>
+      <div class="tl-item"><div class="tl-dot"></div>
+        <div class="card">
+          <div class="ct">18:00</div>
+          <div class="cn">🏨 回飯店休息，等清萊組</div>
+          <div class="cd">梳洗換裝，準備跟 A 組 20:00 古城會合</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 兩組會合 -->
+  <div class="sec" style="margin-top:24px">🌆 兩組會合 · 古城內</div>
   <div class="timeline">
     <div class="tl-item"><div class="tl-dot"></div>
       <div class="card hl">
-        <div class="ct">07:00</div>
-        <div class="cn">🍳 早餐 — ลิ้มศักดากุล (Lim Sak Dakul) 百年古城早餐</div>
-        <div class="cd">古城百年早餐老店，每天早上門口排一小段隊伍，在地人的心頭好<br>吃完才理解「為什麼清邁的早晨有那麼多人願意把時間留給它」</div>
+        <div class="ct">20:00</div>
+        <div class="cn">🍜 晚餐 — Khao Soi Khun Yai（古城 Khao Soi 老店）</div>
+        <div class="cd">古城內知名 Khao Soi 老館，溫馨小館，A 組回來不需跨區，清邁必吃椰奶咖哩麵</div>
         <div class="tags">
-          <a class="tlink" href="https://www.google.com/maps/search/ลิ้มศักดากุล+Chiang+Mai" target="_blank"><span class="t map">📍 古城 Chiang Mai-Lamphun 一帶</span></a>
-          <span class="t cost">50–80 THB/人</span>
-          <span class="t warn">⚠️ 早到避免排隊</span>
-          <span class="t tip">來源：@funthainorth123 Threads</span>
-        </div>
-      </div>
-    </div>
-    <div class="tl-item"><div class="tl-dot"></div>
-      <div class="card hl">
-        <div class="ct">08:30</div>
-        <div class="cn">🛕 Wat Phra Singh — 蘭納王朝精緻佛像</div>
-        <div class="cd">古城最重要廟宇之一，主殿壁畫保存完整，細節值得細看<br>停留 45 min</div>
-        <div class="tags">
-          <a class="tlink" href="https://www.google.com/maps/place/Wat+Phra+Singh/@18.788166,98.9845879,17z/" target="_blank"><span class="t map">📍 Samlan Rd · 步行 10 min</span></a>
-          <span class="t cost">門票 50 THB</span>
-          <span class="t warn">⚠️ 需遮肩遮膝</span>
-        </div>
-      </div>
-    </div>
-    <div class="tl-item"><div class="tl-dot"></div>
-      <div class="card hl">
-        <div class="ct">09:30</div>
-        <div class="cn">🛕 Wat Chedi Luang — 古城最壯觀大佛塔</div>
-        <div class="cd">高達 82m 的古塔，蘭納王朝遺址，充滿歷史感，免費入場<br>停留 45 min</div>
-        <div class="tags">
-          <a class="tlink" href="https://www.google.com/maps/place/Wat+Chedi+Luang/@18.7869693,98.9865804,17z/" target="_blank"><span class="t map">📍 Phra Pokklao Rd · 步行 5 min</span></a>
-          <span class="t cost">免費</span>
-        </div>
-      </div>
-    </div>
-    <div class="tl-item"><div class="tl-dot"></div>
-      <div class="card">
-        <div class="ct">10:30</div>
-        <div class="cn">📸 Tha Phae Gate — 古城東門地標打卡</div>
-        <div class="cd">清邁最有名的城門，護城河沿岸散步，附近有小市集</div>
-        <div class="tags">
-          <a class="tlink" href="https://www.google.com/maps/search/Tha+Phae+Gate+Chiang+Mai" target="_blank"><span class="t map">📍 Tha Phae Rd · 步行 10 min</span></a>
-          <span class="t cost">免費</span>
-        </div>
-      </div>
-    </div>
-    <div class="tl-item"><div class="tl-dot"></div>
-      <div class="card">
-        <div class="ct">11:30</div>
-        <div class="cn">☕️ 古城咖啡廳休息（避開正午最熱段）</div>
-        <div class="cd">護城河邊找一間有冷氣的小店，坐坐聊天，吹一吹</div>
-        <div class="tags">
-          <span class="t cost">80–150 THB</span>
-        </div>
-      </div>
-    </div>
-    <div class="tl-item"><div class="tl-dot"></div>
-      <div class="card hl">
-        <div class="ct">12:30</div>
-        <div class="cn">🍽️ 午餐 — Ekachan Ethnic Thai Cuisine</div>
-        <div class="cd">在地人愛去的北泰料理，@panacea_q 每次回清邁必來報到，道地不踩雷</div>
-        <div class="tags">
-          <a class="tlink" href="https://www.google.com/maps/search/Ekachan+Ethnic+Thai+Cuisine+Chiang+Mai" target="_blank"><span class="t map">📍 古城一帶</span></a>
-          <span class="t cost">100–200 THB/人</span>
-          <span class="t tip">來源：@panacea_q Threads</span>
-        </div>
-      </div>
-    </div>
-    <div class="tl-item"><div class="tl-dot"></div>
-      <div class="card">
-        <div class="ct">14:00</div>
-        <div class="cn">🛍️ 古城巷弄漫步 — 選品店・文創小店</div>
-        <div class="cd">老屋改建小店、手工藝品、泰北風格文創選物，不趕時間慢慢逛</div>
-      </div>
-    </div>
-    <div class="tl-item"><div class="tl-dot"></div>
-      <div class="card">
-        <div class="ct">15:30</div>
-        <div class="cn">☕️ 下午茶咖啡廳（午後最熱，室內避暑最剛好）</div>
-        <div class="tags">
-          <span class="t cost">100–200 THB</span>
-        </div>
-      </div>
-    </div>
-    <div class="tl-item"><div class="tl-dot"></div>
-      <div class="card hl">
-        <div class="ct">17:30</div>
-        <div class="cn">🧎 Monk Chat — Wat Suan Dok（週五 17:30–19:30）</div>
-        <div class="cd">英文授課，含打坐・走路冥想・和尚對談，師父幽默易懂<br>「像老朋友一樣互動」，可以問任何人生問題<br>今天是週五，剛好可以參加！</div>
-        <div class="tags">
-          <a class="tlink" href="https://www.google.com/maps/search/Wat+Suan+Dok+139+Suthep+Road+Chiang+Mai" target="_blank"><span class="t map">📍 139 Suthep Rd · Grab ≈ 15 min</span></a>
-          <span class="t cost">完全免費，無需預約</span>
-          <span class="t warn">⚠️ 著白色或素色，遮手臂和腿</span>
-          <span class="t tip">來源：@xinye.1kgsun Threads</span>
-        </div>
-      </div>
-    </div>
-    <div class="tl-item"><div class="tl-dot"></div>
-      <div class="card hl">
-        <div class="ct">19:30</div>
-        <div class="cn">🍜 晚餐 — Khao Soi Lamduan Fa Ham</div>
-        <div class="cd">清邁最著名 Khao Soi 老店，椰奶咖哩麵 · 清邁必吃！<br>必點：Khao Soi 雞腿 or 牛肉麵</div>
-        <div class="tags">
-          <a class="tlink" href="https://www.google.com/maps?cid=1147431918254619922" target="_blank"><span class="t map">📍 352/22 Charoen Rat Rd 近夜市</span></a>
-          <span class="t cost">人均 80–120 THB</span>
+          <a class="tlink" href="https://www.google.com/maps/search/Khao+Soi+Khun+Yai+Chiang+Mai" target="_blank"><span class="t map">📍 古城內</span></a>
+          <span class="t cost">人均 80–150 THB</span>
         </div>
       </div>
     </div>
     <div class="tl-item"><div class="tl-dot m"></div>
       <div class="card ms">
-        <div class="ct m">21:00</div>
-        <div class="cn">💆 按摩 — Sense Garden Massage（勳勳朋友推薦）</div>
-        <div class="cd">「雞籠 SPA」竹子造景空間，技術扎實，古城區近場首選<br>或：Amber 私藏按摩（若已拿到地址更優先）</div>
+        <div class="ct m">21:30</div>
+        <div class="cn">💆 全員按摩 — Sum Bamboo Massage</div>
+        <div class="cd">清萊組腿腳累，按摩最爽。竹子裝潢空間，6 人需提前預約</div>
         <div class="tags">
-          <a class="tlink" href="https://www.google.com/maps/search/Sense+Garden+Massage+Spa+Sri+Poom+Chiang+Mai" target="_blank"><span class="t map">📍 33/2 Sri Poom Rd 古城</span></a>
-          <span class="t cost">200–300 THB/hr</span>
-          <span class="t tip">備選：Amber 私藏第一名按摩</span>
+          <a class="tlink" href="https://www.google.com/maps/search/Sum+Bamboo+Massage+Chiang+Mai" target="_blank"><span class="t map">📍 古城一帶</span></a>
+          <span class="t cost">300–500 THB/人</span>
+          <span class="t warn">⚠️ 6 人需提前預約</span>
         </div>
       </div>
     </div>
   </div>
 
   <div style="background:#F3F0FF;border:1.5px solid #9775FA;border-radius:12px;padding:12px 16px;margin-top:20px;font-size:13px;color:#5F3DC4">
-    🔄 <b>備用方案（下雨）：</b>廟宇均有屋簷，可繼續參觀；Monk Chat 在室內，完全不受影響；若整天大雨，午後改逛 Maya Mall 或 Central Festival（冷氣全開）。
+    🔄 <b>備用方案（A組天氣不好）：</b>取消清萊改全員留在尼曼，一起去 One Nimman 白色市集＋Baan Kang Wat 藝術村（週五開放），下午古城隨意逛。
   </div>
 </div>
 
 <!-- ════════════════ DAY 3 ════════════════ -->
 <div class="day-panel" id="d3" data-day="3">
-  <div class="day-head" style="background:linear-gradient(135deg,#3ABFB1,#2AA89B)" data-emoji="🛕">
+  <div class="day-head" style="background:linear-gradient(135deg,#3ABFB1,#2AA89B)" data-emoji="🌿">
     <span class="tag">Day 3 · 6/20（六）</span>
-    <h2>素帖山 + 週六夜市</h2>
-    <p>晨間瑜珈 · Doi Suthep · 藝術村 · Wualai 銀飾夜市</p>
+    <h2>手作放空日 · 雨林市集 + 藝術村</h2>
+    <p>雨林手作市集 · Baan Kang Wat · Cheeva Spa · Wualai 銀飾夜市</p>
   </div>
 
   <div style="background:#FFF9DB;border:1.5px solid #FFD43B;border-radius:12px;padding:12px 16px;margin-bottom:20px;font-size:13px;color:#7B5800">
-    💡 <b>安排邏輯：</b>Doi Suthep 上午最涼快（09:30 出發），海拔較高氣溫舒適，避開正午熱浪。下山後 Baan Kang Wat 在素帖山腳方向，順路不繞路。Nimman 冷氣下午咖啡，晚上接 Wualai 週六夜市（17:00–23:00）。全天動線：山上 → 山腳 → 市區，由外而內，完全不繞路。
-    <br><b>⚠️ Doi Suthep 強烈建議包車</b>（Grab 無法上山，Songthaew 需在古城門等拼車）
+    💡 <b>安排邏輯：</b>全天扎根古城西。雨林手作市集 → Baan Kang Wat 藝術村 → ENOUGH FOR LIFE 家飾店，三點同在古城西/素帖路一帶，串聯不繞路。Cheeva Spa 就在 Baan Kang Wat 旁，按完再往南走 Wualai 銀飾夜市（週六 17:00–23:00）。
   </div>
 
   <div class="timeline">
     <div class="tl-item"><div class="tl-dot"></div>
-      <div class="card hl">
-        <div class="ct">07:00</div>
-        <div class="cn">🧘 Yoga in the Park — 戶外草皮瑜珈（可選）</div>
-        <div class="cd">清邁最療癒晨間活動，護城河旁草皮，每天不同課型（Hatha / Kundalini / Vinyasa）</div>
-        <div class="tags">
-          <a class="tlink" href="https://www.google.com/maps/search/Nong+Buak+Had+Park+Chiang+Mai" target="_blank"><span class="t map">📍 Nong Buak Had 公園 / 護城河旁</span></a>
-          <span class="t cost">免費 / 自由捐獻</span>
-          <span class="t warn">⚠️ FB 搜尋「Yoga in the Park Chiang Mai」查課表</span>
-          <span class="t tip">來源：@sunsunmassage Threads</span>
-        </div>
-      </div>
-    </div>
-    <div class="tl-item"><div class="tl-dot"></div>
-      <div class="card hl">
+      <div class="card">
         <div class="ct">08:30</div>
-        <div class="cn">🍳 早餐 — RASIK LOCAL KITCHEN</div>
-        <div class="cd">在地口味早餐，輕鬆補充體力，準備上山</div>
-        <div class="tags">
-          <a class="tlink" href="https://www.google.com/maps/search/RASIK+LOCAL+KITCHEN+Chiang+Mai" target="_blank"><span class="t map">📍 Nimman 一帶</span></a>
-          <span class="t cost">100–200 THB/人</span>
-        </div>
+        <div class="cn">🍳 飯店早餐</div>
+        <div class="cd">輕鬆吃，為一整天逛市集儲備體力</div>
       </div>
     </div>
     <div class="tl-item"><div class="tl-dot"></div>
       <div class="card hl">
         <div class="ct">09:30</div>
-        <div class="cn">🚐 包車出發 → 素帖寺 Wat Phra That Doi Suthep</div>
-        <div class="cd">海拔 1,080m，俯瞰清邁全城。爬 309 階石梯 or 搭纜車（30 THB），值得！<br>停留 1.5 hr</div>
+        <div class="cn">🌿 雨林手作市集 Chamcha Market</div>
+        <div class="cd">距古城 20 分鐘的小眾市集，以手作藝品為主——藍染衣、編織包、木雕小物，也有 workshop 體驗。樹蔭遮陽逛起來不悶，週末開放</div>
         <div class="tags">
-          <a class="tlink" href="https://www.google.com/maps/place/Wat+Phra+That+Doi+Suthep/@18.8047695,98.9217789,17z/" target="_blank"><span class="t map">📍 Doi Suthep-Pui National Park · 包車 30 min</span></a>
-          <span class="t cost">門票 50 THB · 纜車 30 THB</span>
-          <span class="t warn">⚠️ 需遮蔽衣物，現場可租借</span>
-          <span class="t warn">⚠️ 強烈建議包車（Grab 無法上山）</span>
+          <a class="tlink" href="https://www.google.com/maps/search/Chamcha+Market+Chiang+Mai" target="_blank"><span class="t map">📍 Loang Him Kao · Grab 約 20 min</span></a>
+          <span class="t cost">免費入場</span>
+          <span class="t warn">⚠️ 主要週末開放</span>
         </div>
       </div>
     </div>
     <div class="tl-item"><div class="tl-dot"></div>
       <div class="card">
-        <div class="ct">11:30</div>
-        <div class="cn">🚐 包車下山，順路前往 Baan Kang Wat</div>
-        <div class="cd">下山順路，不用額外繞</div>
-        <div class="tags">
-          <span class="t loc">🚗 包車 20 min</span>
-        </div>
-      </div>
-    </div>
-    <div class="tl-item"><div class="tl-dot"></div>
-      <div class="card hl">
         <div class="ct">12:00</div>
-        <div class="cn">🛍️ Baan Kang Wat 藝術村</div>
-        <div class="cd">「比寧曼好逛1000萬倍！」手工設計品・陶器・藝術小店<br>停留建議 1.5–2 小時，週六開放 ✓</div>
-        <div class="tags">
-          <a class="tlink" href="https://www.google.com/maps/place/Baan+Kang+Wat/@18.7763256,98.9487285,17z/" target="_blank"><span class="t map">📍 191-197 Soi Wat Umong</span></a>
-        </div>
+        <div class="cn">🍽️ 市集內午餐</div>
+        <div class="cd">雨林市集內有緬甸料理 Shan State Food 等小館，或直接前往 Baan Kang Wat 附近吃</div>
+        <div class="tags"><span class="t cost">100–200 THB</span></div>
       </div>
     </div>
     <div class="tl-item"><div class="tl-dot"></div>
       <div class="card hl">
         <div class="ct">13:30</div>
-        <div class="cn">🍽️ 午餐 — Khao Soi Maesai</div>
-        <div class="cd">在地人愛的平價 Khao Soi 老店，口味道地，必點雞腿版本</div>
+        <div class="cn">🎨 Baan Kang Wat 藝術村</div>
+        <div class="cd">「比寧曼好逛 1000 萬倍！」手工設計品、陶器、藝術小店聚落。週六開放 ✓<br>停留建議 1.5–2 小時</div>
         <div class="tags">
-          <a class="tlink" href="https://www.google.com/maps/search/Khao+Soi+Maesai+Chiang+Mai" target="_blank"><span class="t map">📍 Nimman 附近 · Grab 10 min</span></a>
-          <span class="t cost">60–100 THB/人</span>
-          <span class="t tip">必點：Khao Soi 雞腿</span>
+          <a class="tlink" href="https://www.google.com/maps/place/Baan+Kang+Wat/@18.7763256,98.9487285,17z/" target="_blank"><span class="t map">📍 191-197 Soi Wat Umong</span></a>
+          <span class="t cost">免費入場</span>
+          <span class="t warn">⚠️ 週一公休（6/20 週六 OK）</span>
         </div>
       </div>
     </div>
     <div class="tl-item"><div class="tl-dot"></div>
       <div class="card">
-        <div class="ct">15:00</div>
-        <div class="cn">☕️ Nimman 咖啡廳補眠（午後最熱，找間有冷氣的坐到飽）</div>
+        <div class="ct">15:30</div>
+        <div class="cn">🏡 ENOUGH FOR LIFE 家飾選物</div>
+        <div class="cd">古城西區家飾選物店，跟 Baan Kang Wat 同方向，逛累了可以坐下喝點什麼</div>
         <div class="tags">
-          <span class="t loc">📍 Nimmanhaemin · 步行</span>
-          <span class="t cost">80–150 THB</span>
+          <a class="tlink" href="https://www.google.com/maps/search/Enough+for+Life+Chiang+Mai" target="_blank"><span class="t map">📍 古城西</span></a>
         </div>
       </div>
     </div>
     <div class="tl-item"><div class="tl-dot m"></div>
       <div class="card ms">
         <div class="ct m">16:30</div>
-        <div class="cn">💆 按摩 1 hr — 上山後腿痠，先按再去夜市！</div>
+        <div class="cn">💆 全員按摩 — Cheeva Spa（白色網美風）</div>
+        <div class="cd">古城西北的白色網美風 Spa，跟 Baan Kang Wat 同一帶，順路接得上。環境美、按摩品質好，按完還可在附設 Glin.Cafe 喝個甜飲</div>
         <div class="tags">
-          <span class="t loc">📍 Nimman 附近</span>
-          <span class="t cost">300–400 THB/hr</span>
+          <a class="tlink" href="https://www.google.com/maps/search/Cheeva+Spa+Chiang+Mai" target="_blank"><span class="t map">📍 Si Phum · 古城西北</span></a>
+          <span class="t cost">精油按摩 1 hr 約 1,300+ THB</span>
+          <span class="t warn">⚠️ 建議 Klook 提前預訂有折扣</span>
         </div>
       </div>
     </div>
     <div class="tl-item"><div class="tl-dot"></div>
-      <div class="card hl">
-        <div class="ct">18:00</div>
-        <div class="cn">🎪 Wualai 週六夜市（銀飾街）</div>
-        <div class="cd">清邁銀飾工藝發源地 · 手工銀飾・泰絲・路邊小吃・現場表演<br>每週六 17:00–23:00</div>
-        <div class="tags">
-          <a class="tlink" href="https://www.google.com/maps/search/Wualai+Walking+Street+Saturday+Night+Market+Chiang+Mai" target="_blank"><span class="t map">📍 Wua Lai Road · Grab 15 min</span></a>
-        </div>
+      <div class="card">
+        <div class="ct">18:30</div>
+        <div class="cn">🏨 回飯店換裝</div>
       </div>
     </div>
     <div class="tl-item"><div class="tl-dot"></div>
       <div class="card hl">
         <div class="ct">19:30</div>
-        <div class="cn">🍽️ 晚餐 — 夜市美食邊走邊吃</div>
-        <div class="cd">Pad Thai・燒烤・芒果糯米飯 🥭 · 路邊吃最爽</div>
-        <div class="tags"><span class="t cost">人均 200–400 THB</span></div>
+        <div class="cn">🎪 Wualai 週六夜市（銀飾街）</div>
+        <div class="cd">清邁銀飾工藝發源地 · 手工銀飾・泰絲・路邊小吃・現場表演<br>夜市美食人均 200–400 THB，順便當晚餐</div>
+        <div class="tags">
+          <a class="tlink" href="https://www.google.com/maps/search/Wualai+Walking+Street+Saturday+Night+Market+Chiang+Mai" target="_blank"><span class="t map">📍 Wualai Road · 古城南 · 每週六 17:00–23:00</span></a>
+        </div>
       </div>
     </div>
     <div class="tl-item"><div class="tl-dot"></div>
       <div class="card">
-        <div class="ct">21:30</div>
-        <div class="cn">🍷 可選：73 Bar 小酌收尾 or 回飯店</div>
+        <div class="ct">22:00</div>
+        <div class="cn">🍷 Noir 酒吧（自由）or 回飯店</div>
+        <div class="cd">夜市逛完想再續一攤就過去，不去也可以回飯店</div>
         <div class="tags">
-          <a class="tlink" href="https://www.google.com/maps/search/73+Bar+1+Charoen+Prathet+Chiang+Mai" target="_blank"><span class="t map">📍 1 Charoen Prathet Rd · Grab 10 min</span></a>
+          <a class="tlink" href="https://www.google.com/maps/search/Noir+Bar+Chiang+Mai" target="_blank"><span class="t map">📍 古城一帶</span></a>
         </div>
       </div>
     </div>
   </div>
 
   <div style="background:#F3F0FF;border:1.5px solid #9775FA;border-radius:12px;padding:12px 16px;margin-top:20px;font-size:13px;color:#5F3DC4">
-    🔄 <b>備用方案（下雨/太累）：</b>取消 Doi Suthep，改全天 Nimman 咖啡廳探店 + Baan Kang Wat + Wualai 週六夜市，動線不變，只省上山這段。
+    🔄 <b>備用方案（下雨）：</b>雨林市集可改至 Nimman 咖啡廳探店，Baan Kang Wat 有屋頂可繼續逛，Wualai 夜市下雨縮短可改古城室內餐廳。Cheeva Spa 全程室內完全不受影響。
   </div>
 </div>
 
 <!-- ════════════════ DAY 4 ════════════════ -->
 <div class="day-panel" id="d4" data-day="4">
-  <div class="day-head" style="background:linear-gradient(135deg,#9B8EC4,#7B5EA7)" data-emoji="🤍">
+  <div class="day-head" style="background:linear-gradient(135deg,#9B8EC4,#7B5EA7)" data-emoji="🌳">
     <span class="tag">Day 4 · 6/21（日）</span>
-    <h2>清萊一日遊</h2>
-    <p>白廟 · 藍廟 · 黑屋 — Karen & Moof 點名必去！</p>
+    <h2>古城日 · 真心市集 + 最後晚餐</h2>
+    <p>真心市集 · Akha Ama · 素帖寺（可選）· 最後正式晚餐 · 週日夜市</p>
   </div>
 
   <div style="background:#FFF9DB;border:1.5px solid #FFD43B;border-radius:12px;padding:12px 16px;margin-bottom:20px;font-size:13px;color:#7B5800">
-    💡 <b>安排邏輯：</b>清萊距清邁 180km，白廟→藍廟→黑屋三點在清萊市區方圓 15km 內，包車串聯動線最順。07:30 出發，10:30 到白廟，傍晚 15:30 返程，19:00 前抵達清邁。Karen & Moof 明天 08:15 出發機場，今晚早點休息即可。
-    <br><b>⚠️ 必須包車，最晚 6/14 前訂位，確認 6 人同車</b>
+    💡 <b>安排邏輯：</b>週日早上全員衝真心市集（週日最熱鬧），接著 Akha Ama 喝招牌 Manee Mana。午後分組：想看廟的去素帖寺，想放空的留古城逛。晚上一起按摩 → 最後正式晚餐 → 散步週日夜市（每週日 17:00–23:00）。
   </div>
 
   <div class="timeline">
     <div class="tl-item"><div class="tl-dot"></div>
-      <div class="card">
-        <div class="ct">07:00</div>
-        <div class="cn">🍳 飯店附近快速早餐</div>
-        <div class="tags"><span class="t cost">50–100 THB</span></div>
-      </div>
-    </div>
-    <div class="tl-item"><div class="tl-dot"></div>
       <div class="card hl">
-        <div class="ct">07:30</div>
-        <div class="cn">🚐 包車出發 → 清萊（車程 3 hr，可補眠）</div>
+        <div class="ct">08:00</div>
+        <div class="cn">🌳 真心市集 Jing Jai Market — 週日限定！</div>
+        <div class="cd">清邁最大型手作雜貨＋農夫市場，週末限定。手作雜貨、有機農產、現場音樂表演<br>⭐ 瓦缸燒雞與炸脆皮豬早早售罄，建議早到！<br>場內也有咖啡攤位，邊吃邊逛</div>
         <div class="tags">
-          <a class="tlink" href="https://www.klook.com/en-US/activity/380-black-house-white-temple-blue-temple-private-tour-chiang-mai/" target="_blank"><span class="t klook">🏆 推薦：Klook Private 包車 整台 US$140.75（≈760 THB/人）</span></a>
-          <a class="tlink" href="https://www.klook.com/en-US/activity/73501-chiangrai-white-blue-black-temple-series-fullday-tour-from-chiangmai/" target="_blank"><span class="t tip">備選：White Blue Black 含溫泉 ★4.8（US$44.19/人）</span></a>
-          <span class="t warn">⚠️ 最晚 6/14 訂位，確認 6 人同車</span>
-          <span class="t warn">⚠️ 帶薄長褲和披肩（廟宇規定）</span>
+          <a class="tlink" href="https://www.google.com/maps/search/Jing+Jai+Market+Chiang+Mai" target="_blank"><span class="t map">📍 古城東北 · Grab ≈ 60 THB</span></a>
+          <span class="t cost">免費入場</span>
+          <span class="t warn">⚠️ 週六日 06:30–15:00，11:00 前到最舒服</span>
         </div>
       </div>
     </div>
     <div class="tl-item"><div class="tl-dot"></div>
       <div class="card hl">
         <div class="ct">10:30</div>
-        <div class="cn">🤍 白廟 Wat Rong Khun</div>
-        <div class="cd">清萊最著名景點，全白鏡片碎玻璃拼貼，耀眼壯觀，Karen & Moof 點名必去！<br>停留 1.5 小時</div>
+        <div class="cn">☕ Akha Ama Coffee — 招牌 Manee Mana ⭐ 必喝</div>
+        <div class="cd">阿卡族少數民族創立的精品咖啡名店，紅磚＋綠植外觀<br>⭐ 必點招牌 <b>Manee Mana</b> — 黑咖啡加新鮮柳橙皮，微甜帶果香，台灣喝不到的清邁特調</div>
         <div class="tags">
-          <a class="tlink" href="https://www.google.com/maps/place/Wat+Rong+Khun/@19.8239596,99.7638163,17z/" target="_blank"><span class="t map">📍 Pa O Don Chai, Mueang Chiang Rai</span></a>
-          <span class="t cost">門票 100 THB</span>
-          <span class="t warn">⚠️ 需遮肩遮膝，可現場租借</span>
+          <a class="tlink" href="https://www.google.com/maps/search/Akha+Ama+Coffee+Phrasingh+Chiang+Mai" target="_blank"><span class="t map">📍 古城內 Phrasingh 分店</span></a>
+          <span class="t cost">飲品 80–150 THB</span>
         </div>
       </div>
     </div>
-    <div class="tl-item"><div class="tl-dot"></div>
-      <div class="card">
-        <div class="ct">12:00</div>
-        <div class="cn">🍽️ 午餐 — 清萊市區道地小吃</div>
-        <div class="cd">Tour 含午餐 or 自費 · 清萊市場小吃</div>
-        <div class="tags"><span class="t cost">150–200 THB</span></div>
-      </div>
+  </div>
+
+  <div style="display:flex;gap:8px;margin:20px 0">
+    <button id="d4-btn-a" onclick="switchVer('d4-ver-a','d4-ver-b',this,document.getElementById('d4-btn-b'))"
+      style="flex:1;padding:10px;border-radius:10px;border:1.5px solid #9B8EC4;background:#F0ECFF;color:#5F3DC4;font-family:'Noto Sans TC',sans-serif;font-size:13px;font-weight:700;cursor:pointer">
+      🛕 A · 素帖寺＋古城廟宇<br><span style="font-weight:400;font-size:12px">Karen &amp; Moof 固定，其他人視意願</span>
+    </button>
+    <button id="d4-btn-b" onclick="switchVer('d4-ver-b','d4-ver-a',this,document.getElementById('d4-btn-a'))"
+      style="flex:1;padding:10px;border-radius:10px;border:1.5px solid var(--border);background:var(--card);color:var(--muted);font-family:'Noto Sans TC',sans-serif;font-size:13px;font-weight:700;cursor:pointer">
+      ☕ B · 古城咖啡放空<br><span style="font-weight:400;font-size:12px">輕鬆逛街不趕路</span>
+    </button>
+  </div>
+
+  <!-- D4 A: 素帖寺 -->
+  <div id="d4-ver-a">
+    <div style="background:#F0ECFF;border-left:3px solid #9B8EC4;border-radius:0 8px 8px 0;padding:10px 14px;margin-bottom:16px;font-size:13px;color:#5F3DC4">
+      ⭐ <b>Karen &amp; Moof 固定參加</b>，其他人視意願加入。建議包車上山（Grab 無法到素帖寺）。
     </div>
-    <div class="tl-item"><div class="tl-dot"></div>
-      <div class="card hl">
-        <div class="ct">13:30</div>
-        <div class="cn">💙 藍廟 Wat Rong Suea Ten</div>
-        <div class="cd">深藍色調、金色裝飾，視覺衝擊強，停留 45 min</div>
-        <div class="tags">
-          <a class="tlink" href="https://www.google.com/maps/place/Wat+Rong+Suea+Ten/@19.8419788,99.7832099,17z/" target="_blank"><span class="t map">📍 Rim Kok, Mueang Chiang Rai · 🚗 15 min</span></a>
-          <span class="t cost">免費入場</span>
+    <div class="timeline">
+      <div class="tl-item"><div class="tl-dot"></div>
+        <div class="card hl">
+          <div class="ct">12:30</div>
+          <div class="cn">🍲 午餐 — Huen Phen</div>
+          <div class="cd">古城北泰料理老店，溫馨小館，吃飽準備爬山</div>
+          <div class="tags">
+            <a class="tlink" href="https://www.google.com/maps/search/Huen+Phen+Chiang+Mai" target="_blank"><span class="t map">📍 古城內</span></a>
+            <span class="t cost">人均 100–200 THB</span>
+          </div>
+        </div>
+      </div>
+      <div class="tl-item"><div class="tl-dot"></div>
+        <div class="card hl">
+          <div class="ct">14:00</div>
+          <div class="cn">🛕 Doi Suthep 素帖寺</div>
+          <div class="cd">清邁最著名山頂寺廟，海拔 1,080m，俯瞰清邁全城<br>爬 309 階石梯 or 搭纜車（30 THB）值得！停留 1.5 hr</div>
+          <div class="tags">
+            <a class="tlink" href="https://www.google.com/maps/place/Wat+Phra+That+Doi+Suthep/@18.8047695,98.9217789,17z/" target="_blank"><span class="t map">📍 Doi Suthep-Pui National Park · 包車 30 min</span></a>
+            <span class="t cost">門票 50 THB · 雙條車來回 80 THB</span>
+            <span class="t warn">⚠️ 需遮蔽衣物，現場可租借</span>
+          </div>
+        </div>
+      </div>
+      <div class="tl-item"><div class="tl-dot"></div>
+        <div class="card">
+          <div class="ct">16:30</div>
+          <div class="cn">🛕 古城寺廟散步（如有體力）</div>
+          <div class="cd"><b>Wat Chedi Luang（大佛塔）</b>— 古城最壯觀，免費<br><b>Wat Phra Singh</b> — 佛像精美，門票 50 THB</div>
         </div>
       </div>
     </div>
-    <div class="tl-item"><div class="tl-dot"></div>
-      <div class="card hl">
-        <div class="ct">14:30</div>
-        <div class="cn">🖤 黑屋 Baan Dam Museum</div>
-        <div class="cd">藝術家 Thawan Duchanee 暗黑美學收藏展，風格前衛，停留 45 min</div>
-        <div class="tags">
-          <a class="tlink" href="https://www.google.com/maps/place/Baan+Dam+Museum/@19.8781975,99.8313571,17z/" target="_blank"><span class="t map">📍 Nang Lae, Mueang Chiang Rai · 🚗 20 min</span></a>
-          <span class="t cost">門票 80 THB</span>
+  </div>
+
+  <!-- D4 B: 放空 -->
+  <div id="d4-ver-b" style="display:none">
+    <div class="timeline">
+      <div class="tl-item"><div class="tl-dot"></div>
+        <div class="card">
+          <div class="ct">12:30</div>
+          <div class="cn">🍽️ 古城悠閒午餐</div>
+          <div class="cd">古城內隨意找一家小館，或回飯店附近吃</div>
+        </div>
+      </div>
+      <div class="tl-item"><div class="tl-dot"></div>
+        <div class="card">
+          <div class="ct">14:00</div>
+          <div class="cn">☕ 古城咖啡逛街</div>
+          <div class="cd">古城內咖啡廳很多，找一間沒去過的坐到飽。最後一個完整下午，不趕路</div>
+        </div>
+      </div>
+      <div class="tl-item"><div class="tl-dot"></div>
+        <div class="card">
+          <div class="ct">15:30</div>
+          <div class="cn">🛍️ 古城內補逛紀念品</div>
+          <div class="cd">逛塔佩門周邊的選品店，替晚上週日夜市暖身</div>
         </div>
       </div>
     </div>
-    <div class="tl-item"><div class="tl-dot"></div>
-      <div class="card">
-        <div class="ct">15:30</div>
-        <div class="cn">🚐 啟程返回清邁（車程 2.5–3 hr，補眠）</div>
-      </div>
-    </div>
-    <div class="tl-item"><div class="tl-dot"></div>
-      <div class="card hl">
-        <div class="ct">19:00</div>
-        <div class="cn">🍽️ 晚餐 — 飯店附近隨意（今天已累）</div>
-        <div class="cd">CHOW CHOW Thai Contemporary 或飯店周邊隨意吃，早點休息</div>
-        <div class="tags">
-          <a class="tlink" href="https://www.google.com/maps/search/CHOW+CHOW+Thai+Contemporary+Chiang+Mai" target="_blank"><span class="t map">📍 Nimman 一帶</span></a>
-          <span class="t cost">150–300 THB/人</span>
-        </div>
-      </div>
-    </div>
+  </div>
+
+  <!-- 兩組會合 -->
+  <div class="sec" style="margin-top:24px">🌆 兩組會合 · 最後一個完整夜晚</div>
+  <div class="timeline">
     <div class="tl-item"><div class="tl-dot m"></div>
       <div class="card ms">
-        <div class="ct m">21:00</div>
-        <div class="cn">💆 按摩 — 清萊回來腿超痠，腳底+背 1.5 hr</div>
+        <div class="ct m">17:00</div>
+        <div class="cn">💆 全員按摩</div>
+        <div class="cd">在清邁最後一個完整下午，好好享受。Amber 私藏地址拿到了就去那裡，否則回 Lila 或附近 Spa</div>
         <div class="tags">
-          <a class="tlink" href="https://www.google.com/maps/search/Chang+Moi+Road+Massage+Chiang+Mai" target="_blank"><span class="t map">📍 古城 Chang Moi Rd 按摩街</span></a>
-          <span class="t cost">300–450 THB / 1.5hr</span>
+          <span class="t cost">300–500 THB/人</span>
+          <span class="t tip">備選：Amber 私藏 or Lila Thai Massage</span>
+        </div>
+      </div>
+    </div>
+    <div class="tl-item"><div class="tl-dot"></div>
+      <div class="card">
+        <div class="ct">18:30</div>
+        <div class="cn">🏨 回飯店梳妝</div>
+      </div>
+    </div>
+    <div class="tl-item"><div class="tl-dot"></div>
+      <div class="card hl">
+        <div class="ct">19:30</div>
+        <div class="cn">🥂 最後晚餐（正式）— 二選一</div>
+        <div class="cd"><b>A · 137 Pillars House</b> — 百年殖民地柚木老宅，清邁最美餐廳之一<br><span style="color:var(--muted);font-size:13px">📍 2 Nawatgate Rd · 人均 1,000–1,800 THB</span><br><br><b>B · Rachamankha Restaurant</b> — 精品飯店，蘭納風格庭院，泰北融合菜<br><span style="color:var(--muted);font-size:13px">📍 Rachamankha Hotel 古城 · 人均 600–1,200 THB</span></div>
+        <div class="tags">
+          <a class="tlink" href="https://www.google.com/maps/place/137+pillars+chiang+mai/data=!4m2!3m1!1s0x30da3ab029df1c7d:0x8e31e674b1e14cfc" target="_blank"><span class="t map">📍 137 Pillars</span></a>
+          <a class="tlink" href="https://www.google.com/maps/place/18.786818,98.98013" target="_blank"><span class="t map">📍 Rachamankha</span></a>
+          <span class="t warn">⚠️ 兩間都需提前訂位（出發前 1–2 週）</span>
+        </div>
+      </div>
+    </div>
+    <div class="tl-item"><div class="tl-dot"></div>
+      <div class="card hl">
+        <div class="ct">21:30</div>
+        <div class="cn">🎪 週日夜市散步（Tha Phae Gate → Ratchadamnoen Rd）</div>
+        <div class="cd">買最後的手信、吃芒果糯米飯，每週日 17:00–23:00</div>
+        <div class="tags">
+          <a class="tlink" href="https://www.google.com/maps/search/Tha+Phae+Walking+Street+Sunday+Chiang+Mai" target="_blank"><span class="t map">📍 Tha Phae Gate · 古城</span></a>
         </div>
       </div>
     </div>
@@ -835,7 +937,7 @@ body { font-family: 'Noto Sans TC', sans-serif; background: var(--bg); color: va
   </div>
 
   <div style="background:#F3F0FF;border:1.5px solid #9775FA;border-radius:12px;padding:12px 16px;margin-top:20px;font-size:13px;color:#5F3DC4">
-    🔄 <b>備用方案（不想去清萊）：</b>Doi Suthep 若 D3 沒去，今天補上 + 週日 Tha Phae Gate 夜市（17:00–23:00）→ 📍 <a href="https://www.google.com/maps/search/Tha+Phae+Walking+Street+Sunday+Chiang+Mai" target="_blank" style="color:#5F3DC4">Google Maps</a>，最後晚餐選 137 Pillars 或 Rachamankha（需提前訂位）。
+    🔄 <b>備用方案（A組太累/下雨）：</b>取消素帖寺，全員留古城逛，下午到 Wat Chedi Luang 散步（免費）。晚餐與週日夜市照常。
   </div>
 </div>
 
@@ -888,62 +990,58 @@ body { font-family: 'Noto Sans TC', sans-serif; background: var(--bg); color: va
   <div class="sec">🌴 4人 繼續放空日</div>
   <div class="timeline">
     <div class="tl-item"><div class="tl-dot"></div>
-      <div class="card hl">
+      <div class="card">
         <div class="ct">09:30</div>
-        <div class="cn">☕️ Nimman 咖啡廳探店（清邁最後一個完整早上）</div>
-        <div class="cd">找一間還沒去過的，不趕，慢慢坐</div>
-        <div class="tags">
-          <span class="t loc">📍 Nimmanhaemin</span>
-          <span class="t tip">推薦來源：@chunyu0401 / @ununfah / @hildainhell Threads</span>
-          <span class="t cost">80–150 THB</span>
-        </div>
+        <div class="cn">☕️ 飯店早餐 · 睡到自然醒</div>
+        <div class="cd">不用全員集合送機，慢慢起床，找一間喜歡的咖啡廳喝個早餐</div>
       </div>
     </div>
     <div class="tl-item"><div class="tl-dot"></div>
       <div class="card hl">
         <div class="ct">11:00</div>
-        <div class="cn">🧁 Kiti Panit — 老字號麵包烘焙</div>
-        <div class="cd">清邁老靈魂的麵包店，在地人的日常，手工烘焙，簡單好吃</div>
+        <div class="cn">🛒 Warorot Market — 大採購！</div>
+        <div class="cd">清邁最大傳統市場，伴手禮採購聖地，現金為主<br>☕ 咖啡豆：Doi Chaang · Akha Ama<br>🧴 天然護膚：Lemongrass House<br>🌶️ 泰式香料包、辣椒醬、椰糖<br>👜 NaRaYa 曼谷包（較便宜）<br><span style="color:#888;font-size:12px">可以幫 Karen &amp; Moof 代買，回台灣交接</span></div>
         <div class="tags">
-          <a class="tlink" href="https://www.google.com/maps/search/Kiti+Panit+Bakery+Chiang+Mai" target="_blank"><span class="t map">📍 古城一帶</span></a>
-          <span class="t cost">80–150 THB</span>
+          <a class="tlink" href="https://www.google.com/maps?cid=2648256326189542464" target="_blank"><span class="t map">📍 10-14 Wichayanon Rd, Chang Moi · 步行 5–10 min</span></a>
+          <span class="t cost">06:00–18:00</span>
+          <span class="t warn">⚠️ 帶足現金泰銖</span>
+        </div>
+      </div>
+    </div>
+    <div class="tl-item"><div class="tl-dot"></div>
+      <div class="card hl">
+        <div class="ct">13:00</div>
+        <div class="cn">🍜 午餐 — Khao Soi Lamduan Fa Ham</div>
+        <div class="cd">清邁最著名 Khao Soi 老店，距 Warorot 步行或 Grab 5 分鐘<br>必點：Khao Soi 雞腿 or 牛肉麵</div>
+        <div class="tags">
+          <a class="tlink" href="https://www.google.com/maps?cid=1147431918254619922" target="_blank"><span class="t map">📍 352/22 Charoen Rat Rd 近夜市</span></a>
+          <span class="t cost">人均 80–120 THB</span>
         </div>
       </div>
     </div>
     <div class="tl-item"><div class="tl-dot"></div>
       <div class="card">
-        <div class="ct">12:30</div>
-        <div class="cn">🍽️ 午餐 — 補吃還沒吃到的</div>
-        <div class="cd">Khao Soi 還沒吃夠？再來一碗！或 RASIK LOCAL KITCHEN</div>
-        <div class="tags"><span class="t cost">100–250 THB/人</span></div>
+        <div class="ct">14:30</div>
+        <div class="cn">🏨 回飯店休息 · 整理戰利品</div>
+        <div class="cd">採購完一定累了，回飯店補眠、整理行李</div>
       </div>
     </div>
     <div class="tl-item"><div class="tl-dot m"></div>
       <div class="card ms">
-        <div class="ct m">14:30</div>
-        <div class="cn">💆 按摩 2 hr — 冥想前深層放鬆，今天最 chill 的組合</div>
+        <div class="ct m">17:00</div>
+        <div class="cn">💆 4人按摩 — Victoria's Massage</div>
+        <div class="cd">深層 2 hr 放鬆。或 Amber 私藏地址有拿到優先去那裡</div>
         <div class="tags">
+          <a class="tlink" href="https://www.google.com/maps/search/Victoria+Massage+Chiang+Mai" target="_blank"><span class="t map">📍 清邁一帶</span></a>
           <span class="t cost">400–600 THB/人（2 hr）</span>
-          <span class="t tip">建議：Amber 私藏 or Lila Thai Massage</span>
+          <span class="t tip">備選：Amber 私藏 or Lila Thai Massage</span>
+          <span class="t warn">⚠️ Monk Chat 今天也有（週一 17:30，與按摩衝突，二選一）</span>
         </div>
       </div>
     </div>
     <div class="tl-item"><div class="tl-dot"></div>
       <div class="card hl">
-        <div class="ct">17:30</div>
-        <div class="cn">🧎 Monk Chat — Wat Suan Dok（週一 17:30–19:30，剛好有！）</div>
-        <div class="cd">和尚英文對談，深度文化交流，比想像中感動<br>「像老朋友一樣互動」，可以問任何人生問題<br>D2 週五也有，今天週一再參加也不重複</div>
-        <div class="tags">
-          <a class="tlink" href="https://www.google.com/maps/search/Wat+Suan+Dok+139+Suthep+Road+Chiang+Mai" target="_blank"><span class="t map">📍 139 Suthep Rd · Grab ≈ 60 THB</span></a>
-          <span class="t cost">完全免費，無需預約</span>
-          <span class="t warn">⚠️ 著白色或素色，遮手臂和腿</span>
-          <span class="t tip">來源：@xinye.1kgsun Threads</span>
-        </div>
-      </div>
-    </div>
-    <div class="tl-item"><div class="tl-dot"></div>
-      <div class="card hl">
-        <div class="ct">20:00</div>
+        <div class="ct">19:30</div>
         <div class="cn">🍽️ 4人小慶祝晚餐 — The House by Ginger</div>
         <div class="cd">古城老宅改建，泰北創意料理，環境美、份量夠，適合收尾慶祝</div>
         <div class="tags">
@@ -956,10 +1054,12 @@ body { font-family: 'Noto Sans TC', sans-serif; background: var(--bg); color: va
     <div class="tl-item"><div class="tl-dot"></div>
       <div class="card hl">
         <div class="ct">21:30</div>
-        <div class="cn">🍷 73 Bar 收尾（Amber 力推，員工長得像 Lisa）</div>
+        <div class="cn">🍷 收尾小酌 — 二選一</div>
+        <div class="cd"><b>Noir</b>（古城氛圍感酒吧）or <b>73 Bar</b>（Amber 力推，員工長得像 Lisa）or <b>North Country</b></div>
         <div class="tags">
-          <a class="tlink" href="https://www.google.com/maps/search/73+Bar+1+Charoen+Prathet+Chiang+Mai" target="_blank"><span class="t map">📍 1 Charoen Prathet Rd · Grab 10 min</span></a>
-          <span class="t tip">來源：Amber IG reel @DYKYoUhN1Nc</span>
+          <a class="tlink" href="https://www.google.com/maps/search/Noir+Bar+Chiang+Mai" target="_blank"><span class="t map">📍 Noir</span></a>
+          <a class="tlink" href="https://www.google.com/maps/search/73+Bar+1+Charoen+Prathet+Chiang+Mai" target="_blank"><span class="t map">📍 73 Bar</span></a>
+          <a class="tlink" href="https://www.google.com/maps/search/North+Country+Bar+Chiang+Mai" target="_blank"><span class="t map">📍 North Country</span></a>
         </div>
       </div>
     </div>
@@ -968,67 +1068,49 @@ body { font-family: 'Noto Sans TC', sans-serif; background: var(--bg); color: va
 
 <!-- ════════════════ DAY 6 ════════════════ -->
 <div class="day-panel" id="d6" data-day="6">
-  <div class="day-head" style="background:linear-gradient(135deg,#F9A875,#E8864A)" data-emoji="🛒">
+  <div class="day-head" style="background:linear-gradient(135deg,#F9A875,#E8864A)" data-emoji="✈️">
     <span class="tag">Day 6 · 6/23（二）· 4人</span>
-    <h2>最後採購日 · 返台</h2>
-    <p>最後一次按摩 · Warorot 大採購 · 17:20 起飛</p>
+    <h2>慢慢醒來 · 從容返台</h2>
+    <p>今天不安排任何行程，慢慢早餐、打包，給清邁一個從容的告別</p>
+  </div>
+
+  <div style="background:#FFF9DB;border:1.5px solid #FFD43B;border-radius:12px;padding:12px 16px;margin-bottom:20px;font-size:13px;color:#7B5800">
+    💡 <b>安排邏輯：</b>D5 Warorot 已採購完、Khao Soi Lamduan 也吃過了，今天只要慢慢醒來、慢慢早餐、慢慢打包，然後就去機場。給清邁一個從容的告別。
   </div>
 
   <div class="timeline">
-    <div class="tl-item"><div class="tl-dot m"></div>
-      <div class="card ms">
-        <div class="ct m">08:00</div>
-        <div class="cn">💆 最後一次按摩！（退房前做）</div>
-        <div class="cd">可詢問 Rimping Village Concierge 安排到房按摩<br>或一開門直接去附近 spa · Thai or Aroma 1.5 hr</div>
-        <div class="tags">
-          <span class="t cost">350–500 THB/人</span>
-          <span class="t tip">飯店到房按摩服務詢問 Concierge</span>
-        </div>
-      </div>
-    </div>
     <div class="tl-item"><div class="tl-dot"></div>
-      <div class="card hl">
-        <div class="ct">10:00</div>
-        <div class="cn">🛒 Warorot Market 大採購</div>
-        <div class="cd">
-          清邁最大傳統市場，現金為主<br>
-          ☕️ 咖啡豆：Doi Chaang Coffee · Akha Ama Coffee<br>
-          🧴 天然護膚：Lemongrass House 系列<br>
-          🌶️ 泰式香料包、辣椒醬、椰糖<br>
-          👜 曼谷包（較便宜）
-        </div>
-        <div class="tags">
-          <a class="tlink" href="https://www.google.com/maps?cid=2648256326189542464" target="_blank"><span class="t map">📍 10-14 Wichayanon Rd, Chang Moi</span></a>
-          <span class="t cost">開放 06:00–18:00</span>
-          <span class="t warn">⚠️ 帶足現金泰銖</span>
-        </div>
-      </div>
-    </div>
-    <div class="tl-item"><div class="tl-dot"></div>
-      <div class="card hl">
-        <div class="ct">12:00</div>
-        <div class="cn">🍽️ 清邁最後一餐</div>
-        <div class="cd">吃什麼你們決定 — 或許還沒吃夠 Khao Soi？</div>
-        <div class="tags"><span class="t cost">Grab ≈ 60 THB</span></div>
+      <div class="card">
+        <div class="ct">早上</div>
+        <div class="cn">☕️ 飯店早餐 · 睡到自然醒</div>
+        <div class="cd">不用早起、不用趕路。在 Rimping Village 從容地用最後一頓早餐</div>
       </div>
     </div>
     <div class="tl-item"><div class="tl-dot"></div>
       <div class="card">
         <div class="ct">11:30</div>
-        <div class="cn">🏨 退房 · 行李寄存飯店</div>
+        <div class="cn">🧳 退房 · 行李寄存飯店</div>
+        <div class="cd">Check-out 但行李留在飯店，下午回來取</div>
       </div>
     </div>
     <div class="tl-item"><div class="tl-dot"></div>
       <div class="card">
-        <div class="ct">13:30</div>
-        <div class="cn">☕️ 最後一杯清邁咖啡</div>
-        <div class="cd">回味整趟旅程，喝完就準備出發</div>
+        <div class="ct">12:00</div>
+        <div class="cn">🍽️ 午餐 · 自由</div>
+        <div class="cd">飯店附近隨意吃，或想去哪間之前沒吃到的最後一發</div>
+      </div>
+    </div>
+    <div class="tl-item"><div class="tl-dot"></div>
+      <div class="card">
+        <div class="ct">14:00</div>
+        <div class="cn">☕️ 飯店或附近咖啡廳 · 等出發</div>
+        <div class="cd">回味整趟旅程，喝完就準備出發，不去任何遠的地方</div>
       </div>
     </div>
     <div class="tl-item"><div class="tl-dot"></div>
       <div class="card hl">
-        <div class="ct">14:15</div>
-        <div class="cn">🚖 前往機場取行李 → CNX</div>
+        <div class="ct">14:45</div>
+        <div class="cn">🚖 取行李 · 前往機場 CNX</div>
         <div class="tags">
           <a class="tlink" href="https://www.klook.com/en-US/airport-transfers/service/cnx-chiang-mai-international-airport/" target="_blank"><span class="t klook">Klook 回程接送 ≈ 475 THB（4人），30 min</span></a>
           <span class="t warn">⚠️ 17:20 起飛需 14:50 前到機場</span>
@@ -1046,12 +1128,11 @@ body { font-family: 'Noto Sans TC', sans-serif; background: var(--bg); color: va
   <div class="ms-box">
     <h3>💆 按摩總整理 — 每天都要按！</h3>
     <div class="ms-row"><span>D1 · Karen &amp; Moof 下午（Nimman）</span><span class="p">Fah Lanna Spa · 350–550 THB</span></div>
-    <div class="ms-row"><span>D1 · 全員晚間（古城）</span><span class="p">Lila Thai Massage · 200 THB/hr</span></div>
-    <div class="ms-row"><span>D2 · 古城日晚間</span><span class="p">Sense Garden / Amber 私藏 · 200–300 THB/hr</span></div>
-    <div class="ms-row"><span>D3 · 素帖山後快速 1hr</span><span class="p">Nimman 附近 · 300–400 THB</span></div>
-    <div class="ms-row"><span>D4 · 清萊回來腿超痠</span><span class="p">古城按摩街 腳底+背 · 300–450 THB</span></div>
-    <div class="ms-row"><span>D5 · 4人，冥想後深層 2hr</span><span class="p">Amber 私藏 or Lila · 400–600 THB</span></div>
-    <div class="ms-row"><span>D6 · 4人，退房前最後一發</span><span class="p">到房 or Spa · 350–500 THB</span></div>
+    <div class="ms-row"><span>D1 · 全員晚間 21:00（古城）</span><span class="p">Lila Thai Massage · 200 THB/hr ⚠️ 預約</span></div>
+    <div class="ms-row"><span>D2 · 清萊回來 21:30（全員 6人）</span><span class="p">Sum Bamboo Massage · ⚠️ 需提前預約</span></div>
+    <div class="ms-row"><span>D3 · 手作日下午 16:30（全員）</span><span class="p">Cheeva Spa · 精油 1hr ≈ 1,300 THB · Klook 預訂</span></div>
+    <div class="ms-row"><span>D4 · 最後晚間 17:00（全員）</span><span class="p">Amber 私藏 or Lila Thai Massage · 300–500 THB</span></div>
+    <div class="ms-row"><span>D5 · 4人，採購後 17:00，深層 2hr</span><span class="p">Victoria's Massage · 400–600 THB ⚠️ 預約</span></div>
   </div>
 </div>
 
@@ -1173,7 +1254,7 @@ body { font-family: 'Noto Sans TC', sans-serif; background: var(--bg); color: va
   </div>
   <div class="todo">
     <div class="todo-ic"></div>
-    <div class="todo-txt">D4（6/21）清萊包車訂位 ⚠️ 最重要（最晚 6/14）
+    <div class="todo-txt">D2（6/19）清萊包車訂位 ⚠️ 最重要（最晚 6/14）
       <div class="todo-sub">
         <a href="https://www.klook.com/en-US/activity/380-black-house-white-temple-blue-temple-private-tour-chiang-mai/" target="_blank" style="color:#E65100">🏆 推薦：Private 包車（整台 US$140.75 ≈ 760 THB/人）</a><br>
         <a href="https://www.klook.com/en-US/activity/73501-chiangrai-white-blue-black-temple-series-fullday-tour-from-chiangmai/" target="_blank" style="color:#888">備選：White Blue Black 含溫泉 ★4.8（US$44.19/人）</a>
@@ -1182,11 +1263,27 @@ body { font-family: 'Noto Sans TC', sans-serif; background: var(--bg); color: va
   </div>
   <div class="todo">
     <div class="todo-ic"></div>
-    <div class="todo-txt">D3（6/20）Doi Suthep 包車（或雙條車）安排<div class="todo-sub">Grab 無法上山，需提前確認包車 or Songthaew 拼車（古城門口等）</div></div>
+    <div class="todo-txt">D4（6/21）最後晚餐訂位 ⚠️（最晚 6/14）<div class="todo-sub">A：137 Pillars House（人均 1,000–1,800 THB）or B：Rachamankha Restaurant（600–1,200 THB），兩間都需提前 1–2 週訂位</div></div>
   </div>
   <div class="todo">
     <div class="todo-ic"></div>
-    <div class="todo-txt">Amber 分享按摩店私藏資訊<div class="todo-sub">盡快！多天按摩都想去</div></div>
+    <div class="todo-txt">D2 Sum Bamboo Massage 6人預約 ⚠️（最晚 6/14）<div class="todo-sub">D2 清萊一日遊結束後 21:30 全員放鬆按摩，需提前預約 6 人名額</div></div>
+  </div>
+  <div class="todo">
+    <div class="todo-ic"></div>
+    <div class="todo-txt">D3 Cheeva Spa Klook 預訂 ⚠️（最晚 6/16）<div class="todo-sub">D3 16:30 全員按摩，白色網美風 Spa，Klook 有折扣，精油按摩 1hr ≈ 1,300 THB</div></div>
+  </div>
+  <div class="todo">
+    <div class="todo-ic"></div>
+    <div class="todo-txt">D1 Lila Thai Massage 6人預約（出發前確認）<div class="todo-sub">電話或現場預約，6人需提前通知。D1 晚間 21:00 全員按摩，Ratchavithi Rd 古城分店</div></div>
+  </div>
+  <div class="todo">
+    <div class="todo-ic"></div>
+    <div class="todo-txt">D5 Victoria's Massage 4人預約<div class="todo-sub">D5 17:00 深層 2hr，或 Amber 私藏地址有拿到改去那裡</div></div>
+  </div>
+  <div class="todo">
+    <div class="todo-ic"></div>
+    <div class="todo-txt">Amber 分享按摩店私藏資訊<div class="todo-sub">盡快！D4 晚間 / D5 備選都想去，有地址再更新</div></div>
   </div>
   <div class="todo">
     <div class="todo-ic"></div>
@@ -1194,7 +1291,7 @@ body { font-family: 'Noto Sans TC', sans-serif; background: var(--bg); color: va
   </div>
   <div class="todo">
     <div class="todo-ic"></div>
-    <div class="todo-txt">確認竹林市集開放時間<div class="todo-sub">@panacea_q 查詢</div></div>
+    <div class="todo-txt">確認雨林手作市集 Chamcha 開放時間<div class="todo-sub">D3（6/20 週六）手作市集，週末限定。查詢確切位置和開放時段</div></div>
   </div>
   <div class="todo">
     <div class="todo-ic"></div>
@@ -1283,9 +1380,9 @@ body { font-family: 'Noto Sans TC', sans-serif; background: var(--bg); color: va
     <div class="pl-card">
       <div class="pl-top">
         <div class="pl-name">古城 Chang Moi Rd 按摩街</div>
-        <div class="pl-days"><span class="pd">D2</span></div>
+        <div class="pl-days"><span class="pd">D4</span></div>
       </div>
-      <div class="pl-desc">清萊一日遊回來腿超痠，就在這條街隨選一家，腳底+背部最適合</div>
+      <div class="pl-desc">古城日逛完寺廟腿超痠，就在這條街隨選一家，腳底+背部最適合，價格實惠</div>
       <div class="tags">
         <span class="t loc">📍 Chang Moi Rd 古城內</span>
         <span class="t cost">腳底+背 300–450 THB / 1.5hr</span>
@@ -1295,13 +1392,52 @@ body { font-family: 'Noto Sans TC', sans-serif; background: var(--bg); color: va
     <div class="pl-card">
       <div class="pl-top">
         <div class="pl-name">Sense Garden Massage &amp; Spa</div>
-        <div class="pl-days"><span class="pd">D2</span><span class="pd">D3</span></div>
+        <div class="pl-days"><span class="pd">D4</span><span class="pd">D5</span></div>
       </div>
       <div class="pl-desc">「雞籠 SPA」— 竹子造景空間，按摩師技術扎實，勳勳清邁在地朋友力推</div>
       <div class="tags">
         <span class="t loc">📍 33/2 Sri Poom Rd, Si Phum 古城區</span>
         <span class="t cost">Thai 200–300 THB/hr</span>
         <span class="t tip">來源：勳勳清邁朋友 Google Maps 推薦</span>
+      </div>
+    </div>
+
+    <div class="pl-card">
+      <div class="pl-top">
+        <div class="pl-name">Sum Bamboo Massage</div>
+        <div class="pl-days"><span class="pd">D2</span></div>
+      </div>
+      <div class="pl-desc">D2 清萊一日遊結束後全員 21:30 放鬆按摩，6人同時間段，需提前預約</div>
+      <div class="tags">
+        <a class="tlink" href="https://www.google.com/maps/search/Sum+Bamboo+Massage+Chiang+Mai" target="_blank"><span class="t map">📍 清邁市區</span></a>
+        <span class="t cost">300–500 THB/hr</span>
+        <span class="t warn">⚠️ 6人需提前預約</span>
+      </div>
+    </div>
+
+    <div class="pl-card">
+      <div class="pl-top">
+        <div class="pl-name">Cheeva Spa</div>
+        <div class="pl-days"><span class="pd">D3</span></div>
+      </div>
+      <div class="pl-desc">白色網美風 Spa，古城西北 Si Phum，與 Baan Kang Wat 同帶，順路接得上。按完可在附設 Glin.Cafe 喝甜飲</div>
+      <div class="tags">
+        <a class="tlink" href="https://www.google.com/maps/search/Cheeva+Spa+Chiang+Mai" target="_blank"><span class="t map">📍 Si Phum · 古城西北</span></a>
+        <span class="t cost">精油按摩 1 hr 約 1,300+ THB</span>
+        <span class="t warn">⚠️ Klook 預訂有折扣，D3 16:30 全員</span>
+      </div>
+    </div>
+
+    <div class="pl-card">
+      <div class="pl-top">
+        <div class="pl-name">Victoria's Massage</div>
+        <div class="pl-days"><span class="pd">D5</span></div>
+      </div>
+      <div class="pl-desc">D5 4人 Warorot 採購後深層 2hr 放鬆。或 Amber 私藏地址有拿到優先去那裡</div>
+      <div class="tags">
+        <a class="tlink" href="https://www.google.com/maps/search/Victoria+Massage+Chiang+Mai" target="_blank"><span class="t map">📍 清邁市區</span></a>
+        <span class="t cost">400–600 THB/人（2 hr）</span>
+        <span class="t tip">備選：Amber 私藏 or Lila Thai Massage</span>
       </div>
     </div>
 
@@ -1444,6 +1580,31 @@ body { font-family: 'Noto Sans TC', sans-serif; background: var(--bg); color: va
         <span class="t tip">來源：@funthainorth123 影片截圖</span>
       </div>
     </div>
+
+    <div class="pl-card">
+      <div class="pl-top">
+        <div class="pl-name">Akha Ama Coffee</div>
+        <div class="pl-days"><span class="pd">D4</span></div>
+      </div>
+      <div class="pl-desc">阿卡族少數民族創立的精品咖啡名店，紅磚＋綠植外觀，古城內 Phrasingh 分店最美。D4 真心市集後必喝</div>
+      <div class="tags">
+        <a class="tlink" href="https://www.google.com/maps/search/Akha+Ama+Coffee+Phrasingh+Chiang+Mai" target="_blank"><span class="t map">📍 古城內 Phrasingh 分店</span></a>
+        <span class="t cost">飲品 80–150 THB</span>
+      </div>
+      <div class="pl-must">必點：招牌 Manee Mana — 黑咖啡加新鮮柳橙皮，微甜帶果香</div>
+    </div>
+
+    <div class="pl-card">
+      <div class="pl-top">
+        <div class="pl-name">Proudproudproud Cafe</div>
+        <div class="pl-days"><span class="pd">D2</span></div>
+      </div>
+      <div class="pl-desc">D2 B組（尼曼組）上午探索的咖啡廳，設計感強，Nimman 一帶</div>
+      <div class="tags">
+        <a class="tlink" href="https://www.google.com/maps/search/Proudproudproud+Chiang+Mai" target="_blank"><span class="t map">📍 Nimman 附近</span></a>
+        <span class="t cost">飲品 100–180 THB</span>
+      </div>
+    </div>
   </div>
 
   <!-- 🍽️ 餐廳 -->
@@ -1495,7 +1656,7 @@ body { font-family: 'Noto Sans TC', sans-serif; background: var(--bg); color: va
     <div class="pl-card">
       <div class="pl-top">
         <div class="pl-name">Khao Soi Lamduan Fa Ham（藍姆端）</div>
-        <div class="pl-days"><span class="pd">D2</span></div>
+        <div class="pl-days"><span class="pd">D5</span></div>
       </div>
       <div class="pl-desc">清邁最著名 Khao Soi 老店，在地人與外國人都愛，椰奶咖哩麵是清邁必吃</div>
       <div class="tags">
@@ -1624,6 +1785,43 @@ body { font-family: 'Noto Sans TC', sans-serif; background: var(--bg); color: va
         <span class="t tip">來源：勳勳朋友 Google Maps 推薦</span>
       </div>
     </div>
+
+    <div class="pl-card">
+      <div class="pl-top">
+        <div class="pl-name">Khao Soi Khun Yai</div>
+        <div class="pl-days"><span class="pd">D2</span></div>
+      </div>
+      <div class="pl-desc">D2 清萊回來晚間全員一起吃的 Khao Soi，CP 值高、口碑佳</div>
+      <div class="tags">
+        <a class="tlink" href="https://www.google.com/maps/search/Khao+Soi+Khun+Yai+Chiang+Mai" target="_blank"><span class="t map">📍 清邁市區</span></a>
+        <span class="t cost">人均 80–120 THB</span>
+      </div>
+      <div class="pl-must">必點：Khao Soi 雞腿 or 牛肉版</div>
+    </div>
+
+    <div class="pl-card">
+      <div class="pl-top">
+        <div class="pl-name">Huen Phen</div>
+        <div class="pl-days"><span class="pd">D4</span></div>
+      </div>
+      <div class="pl-desc">古城北泰料理老店，溫馨小館，D4 A組素帖寺前午餐，吃飽準備爬山</div>
+      <div class="tags">
+        <a class="tlink" href="https://www.google.com/maps/search/Huen+Phen+Chiang+Mai" target="_blank"><span class="t map">📍 古城內</span></a>
+        <span class="t cost">人均 100–200 THB</span>
+      </div>
+    </div>
+
+    <div class="pl-card">
+      <div class="pl-top">
+        <div class="pl-name">Madee Restaurant</div>
+        <div class="pl-days"><span class="pd">D2</span></div>
+      </div>
+      <div class="pl-desc">D2 B組（尼曼組）午餐，Nimman 附近，料理水準不錯</div>
+      <div class="tags">
+        <a class="tlink" href="https://www.google.com/maps/search/Madee+Restaurant+Chiang+Mai" target="_blank"><span class="t map">📍 Nimman 一帶</span></a>
+        <span class="t cost">人均 150–250 THB</span>
+      </div>
+    </div>
   </div>
 
   <!-- 🍷 酒吧 -->
@@ -1663,6 +1861,28 @@ body { font-family: 'Noto Sans TC', sans-serif; background: var(--bg); color: va
       <div class="tags">
         <span class="t warn">⚠️ 需進 IG 原貼確認</span>
         <span class="t tip">來源：IG @DWWW0grD0pv</span>
+      </div>
+    </div>
+
+    <div class="pl-card">
+      <div class="pl-top">
+        <div class="pl-name">Noir Bar</div>
+        <div class="pl-days"><span class="pd">D3</span><span class="pd">D5</span></div>
+      </div>
+      <div class="pl-desc">古城氛圍感酒吧，D3 夜市後可續攤，D5 也是 4人最後夜晚選項之一</div>
+      <div class="tags">
+        <a class="tlink" href="https://www.google.com/maps/search/Noir+Bar+Chiang+Mai" target="_blank"><span class="t map">📍 古城一帶</span></a>
+      </div>
+    </div>
+
+    <div class="pl-card">
+      <div class="pl-top">
+        <div class="pl-name">North Country Bar</div>
+        <div class="pl-days"><span class="pd">D5</span></div>
+      </div>
+      <div class="pl-desc">D5 4人最後夜晚的三選一之一，清邁在地酒吧氛圍</div>
+      <div class="tags">
+        <a class="tlink" href="https://www.google.com/maps/search/North+Country+Bar+Chiang+Mai" target="_blank"><span class="t map">📍 清邁市區</span></a>
       </div>
     </div>
   </div>
@@ -1711,18 +1931,7 @@ body { font-family: 'Noto Sans TC', sans-serif; background: var(--bg); color: va
       <div class="pl-must">必吃：芒果糯米飯 🥭 · Pad Thai · 燒烤</div>
     </div>
 
-    <div class="pl-card">
-      <div class="pl-top">
-        <div class="pl-name">竹林市集</div>
-        <div class="pl-days"><span class="pd">D3</span></div>
-      </div>
-      <div class="pl-desc">@panacea_q 每次回清邁必來報到！有賣超好吃鷹嘴豆泥</div>
-      <div class="tags">
-        <span class="t warn">⚠️ 需確認確切地點和開放時間</span>
-        <span class="t tip">來源：@panacea_q Threads</span>
-      </div>
-      <div class="pl-must">必吃：鷹嘴豆泥</div>
-    </div>
+    <!-- 竹林市集 已整合為 雨林手作市集 Chamcha（見上方）-->
 
     <div class="pl-card">
       <div class="pl-top">
@@ -1740,9 +1949,9 @@ body { font-family: 'Noto Sans TC', sans-serif; background: var(--bg); color: va
     <div class="pl-card">
       <div class="pl-top">
         <div class="pl-name">Warorot Market（花市）</div>
-        <div class="pl-days"><span class="pd">D6</span></div>
+        <div class="pl-days"><span class="pd">D5</span></div>
       </div>
-      <div class="pl-desc">清邁最大傳統市場，伴手禮採購聖地，D6 回台前大掃貨</div>
+      <div class="pl-desc">清邁最大傳統市場，伴手禮採購聖地，D5 4人大掃貨（Karen & Moof 可先到代買）</div>
       <div class="tags">
         <span class="t loc">📍 Chang Moi Rd 古城旁</span>
         <span class="t cost">每天 06:00–18:00</span>
@@ -1754,11 +1963,72 @@ body { font-family: 'Noto Sans TC', sans-serif; background: var(--bg); color: va
     <div class="pl-card">
       <div class="pl-top">
         <div class="pl-name">Nimmanhaemin Road（尼曼路）</div>
-        <div class="pl-days"><span class="pd">D1</span><span class="pd">D3</span><span class="pd">D5</span></div>
+        <div class="pl-days"><span class="pd">D1</span><span class="pd">D2</span><span class="pd">D5</span></div>
       </div>
-      <div class="pl-desc">清邁最文青設計感街道，咖啡廳、選品店、藝術小店密集，隨便逛都有驚喜</div>
+      <div class="pl-desc">清邁最文青設計感街道，咖啡廳、選品店、藝術小店密集，D2 B組白天主場</div>
       <div class="tags">
         <span class="t loc">📍 Nimmanhaemin Rd</span>
+      </div>
+    </div>
+
+    <div class="pl-card">
+      <div class="pl-top">
+        <div class="pl-name">雨林手作市集 Chamcha</div>
+        <div class="pl-days"><span class="pd">D3</span></div>
+      </div>
+      <div class="pl-desc">D3 手作放空日的主要目的地，週末限定。手作設計品、文創小物，@panacea_q 每次回清邁必來</div>
+      <div class="tags">
+        <a class="tlink" href="https://www.google.com/maps/search/Chamcha+Market+Chiang+Mai" target="_blank"><span class="t map">📍 清邁市區（週末限定）</span></a>
+        <span class="t warn">⚠️ 需確認確切位置和開放時段</span>
+        <span class="t tip">來源：@panacea_q Threads</span>
+      </div>
+      <div class="pl-must">必吃：鷹嘴豆泥</div>
+    </div>
+
+    <div class="pl-card">
+      <div class="pl-top">
+        <div class="pl-name">Jing Jai Market（真心市集）</div>
+        <div class="pl-days"><span class="pd">D4</span></div>
+      </div>
+      <div class="pl-desc">清邁最大型手作雜貨＋農夫市場，週末限定，D4 週日早上全員衝。瓦缸燒雞與炸脆皮豬早早售罄，建議早到！</div>
+      <div class="tags">
+        <a class="tlink" href="https://www.google.com/maps/search/Jing+Jai+Market+Chiang+Mai" target="_blank"><span class="t map">📍 古城東北 · Grab ≈ 60 THB</span></a>
+        <span class="t cost">免費入場 · 週六日 06:30–15:00</span>
+        <span class="t warn">⚠️ 11:00 前到最舒服</span>
+      </div>
+    </div>
+
+    <div class="pl-card">
+      <div class="pl-top">
+        <div class="pl-name">ENOUGH FOR LIFE</div>
+        <div class="pl-days"><span class="pd">D3</span></div>
+      </div>
+      <div class="pl-desc">D3 B組下午的選品店，設計感強，服飾與生活選品，Nimman 附近</div>
+      <div class="tags">
+        <a class="tlink" href="https://www.google.com/maps/search/ENOUGH+FOR+LIFE+Chiang+Mai" target="_blank"><span class="t map">📍 Nimman 附近</span></a>
+      </div>
+    </div>
+
+    <div class="pl-card">
+      <div class="pl-top">
+        <div class="pl-name">One Nimman &amp; 白色市集</div>
+        <div class="pl-days"><span class="pd">D2</span></div>
+      </div>
+      <div class="pl-desc">D2 B組（尼曼組）下午逛街的目的地，One Nimman 商業廣場旁的白色露天市集，設計選品齊全</div>
+      <div class="tags">
+        <a class="tlink" href="https://www.google.com/maps/search/One+Nimman+Chiang+Mai" target="_blank"><span class="t map">📍 One Nimman · Nimmanhaemin Rd</span></a>
+        <span class="t cost">免費入場</span>
+      </div>
+    </div>
+
+    <div class="pl-card">
+      <div class="pl-top">
+        <div class="pl-name">Fimue &amp; Tiny Space</div>
+        <div class="pl-days"><span class="pd">D2</span></div>
+      </div>
+      <div class="pl-desc">D2 B組（尼曼組）下午探索的兩個設計選品空間，Nimman 一帶</div>
+      <div class="tags">
+        <a class="tlink" href="https://www.google.com/maps/search/Fimue+Chiang+Mai" target="_blank"><span class="t map">📍 Nimman 附近</span></a>
       </div>
     </div>
   </div>
